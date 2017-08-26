@@ -30,7 +30,7 @@ I decided to help him a little bit. "I suggest using a variable like `good_input
 
 Here is what he's got:
 
-``` python
+```python
 good_input = False
 while good_input == False:
     print("Choose your base product from the menu (press the number):")
@@ -44,7 +44,7 @@ while good_input == False:
 
 "Now try it," said I.
 
-``` console
+```console
 erik@idea:~$ ./coffeeshop.py
 Choose your base product from the menu (press the number):
 1 chocolate
@@ -71,7 +71,7 @@ I suggested: "It might be a good idea to let people know what's wrong with their
 
 "Good idea!" rejoiced Erik and made his `if` statement look like this:
 
-``` python
+```python
     if p_index <= len(products) and p_index > 0 :
         good_input = True
     else:
@@ -86,7 +86,7 @@ I suggested: "It might be a good idea to let people know what's wrong with their
 
 Erik has copied the loop code to the other two menus. Now his program looked like this:
 
-``` python
+```python
 #!/usr/bin/python3
 
 products = ["chocolate", "coffee"]
@@ -156,7 +156,7 @@ ValueError: invalid literal for int() with base 10: 'ghkflkjhdg'
 
 "`ValueError` is the word which tells us that there is an exception and we should handle it somehow. There are other errors: `SyntaxError`, `ZeroDivisionError`, `TypeError`... You can find some examples in the Python official tutorial here: (https://docs.python.org/3/tutorial/errors.html). Let's take an example from the tutorial, it does exactly what we want. Look:"
 
-``` python
+```python
 while True:
     try:
         x = int(input("Please enter a number: "))
@@ -172,4 +172,141 @@ Erik thought for a second and said: "I think checking for gibberish should come 
 "That's right!" I said. "So we ask for input and continue the loop until we see a valid string which we can convert to an integer. And only then, after we converted it, we check if it's in the right range. When changing your code, please keep track of the indents and remember about the flow."
 
 "Yes, sure," said Erik and get to the editor.
+
+After struggling with the code for a minute he asked: "What does this `break` mean?"
+
+"It's a way to exit the `while` loop. In this example they decided not to use a condition in the `while` statement and they just put `True` in it. That means the loop will go forever unless we exit from it using this `break` keyword. And, as you can see, in the example they exit the loop if the input can be converted to a number. If this is not the case (somebody has entered letters), then they raise an exception and continue the loop. In our case even if we see that the input has only numbers, it's too early to exit the loop. We should go ahead and check if the number is in the range, right?"
+
+"So what should we put instead of `break` here?"
+
+"Nothing. We should just continue with the flow. If our `try` was successful, we don't go into `except` and continue with the statement which goes after `except`---but at the same indentation level."
+
+"And if our `try` wasn't successful we tell the user that he should enter a number, not stupid letters, right?"
+
+"Yes, but not only that. After you told the user about his mistake, you should go back to the beginning of the loop. In Python we use the word `continue` for that. And then we start all over again: check the condition and decide if you continue or not. In our case we haven't change the condition, `good_input` is still `False` so we'll continue with the prompt asking to choose the base product."
+
+"Should I put `continue` after my error message?"
+
+"Exactly right! Try it on your first dialogue and if it works, copy to the other menus."
+
+Here is what Erik has got in the first dialogue:
+
+``` python
+good_input = False
+while good_input == False:
+    print("Choose your base product from the menu (press the number):")
+    for i, product in enumerate(products, start=1):
+        print(i, product)
+    p = input()
+
+    try:
+        p_index = int(p)
+    except  ValueError:
+        print("Error: you should enter a NUMBER!")
+        continue
+
+    if p_index <= len(products) and p_index > 0 :
+        good_input = True
+    else:
+        print("You should enter a number between 1 and ", len(products))
+```
+
+He ran the script and tried to enter all kinds of garbage---the program always responded: "You should enter a NUMBER!". Erik was happy---as if he just has defended his application from a violent hacker's attack!
+
+"Now go ahead and copy this code in the other menus," said I.
+
+Erik worked for a while, testing the script from time to time, muttering and cursing along the way. As the old saying goes: "What is the most popular programming language? Profanity." As a good parent I probably should've told him not to use some words, but I had a different task right now. 
+
+"It works now!" he said finally. 
+
+"What were you cursing about?" I asked.
+
+"Oh, you know, we have different variables in all three menus so I had to change all of them and keep track of all those `p_index`, '`f_index`, `t_index`... But it works now! Look at my script now," and he proudly presented the fruit of his labor.
+
+```python
+#!/usr/bin/python3
+
+products = ["chocolate", "coffee"]
+flavors = ["caramel",
+           "butterscotch",
+           "strawberry",
+           "raspberry",
+           "blueberry",
+           "sweetstrawberry",
+           "marshmallow",
+           "plain"]
+toppings = ["chocolate", "sweetstrawberry"]
+
+
+good_input = False
+while good_input == False:
+    print("Choose your base product from the menu (press the number):")
+    for i, product in enumerate(products, start=1):
+        print(i, product)
+    p = input()
+
+    try:
+        p_index = int(p)
+    except  ValueError:
+        print("Error: you should enter a NUMBER!")
+        continue
+
+    if p_index <= len(products) and p_index > 0 :
+        good_input = True
+    else:
+        print("You should enter a number between 1 and ", len(products))
+
+good_input = False
+while good_input == False:
+    print("Choose your flavor from the menu (press the number):")
+    for i, flavor in enumerate(flavors, start=1):
+        print(i, flavor)
+    f = input()
+
+    try:
+        f_index = int(f)
+    except  ValueError:
+        print("Error: you should enter a NUMBER!")
+        continue
+
+    if f_index <= len(flavors) and f_index > 0 :
+        good_input = True
+    else:
+        print("You should enter a number between 1 and ", len(flavors))
+
+
+good_input = False
+while good_input == False:
+    print("Choose your topping from the menu (press the number):")
+    for i, topping in enumerate(toppings, start=1):
+        print(i, topping)
+    t = input()
+
+    try:
+        t_index = int(t)
+    except  ValueError:
+        print("Error: you should enter a NUMBER!")
+        continue
+
+    if t_index <= len(toppings) and t_index > 0 :
+        good_input = True
+    else:
+        print("You should enter a number between 1 and ", len(toppings))
+
+
+print("Here is your order: base product: ", products[p_index-1], 
+  ", flavor: ", flavors[f_index-1], ", topping: ", toppings[t_index-1])
+```
+
+"You see---it's more than 70 lines of code that I wrote!" Erik was very proud indeed.
+
+"Great! Are you tired now?"
+
+"Yes, I am! And hungry!"
+
+"We can ask Mom to fix some lunch for us. We have definitely earned it. As for your tiredness, I think we can do something about it too. You see, you've spend some time copying and pasting pieces of code from one menu to another. You have to change it a bit, but only a bit: one variable here, one variable there. There is more efficient way to do this. I am talking about functions. Every time you notice you are repeating yourself, think about functions. Think: is it possible to simplify it and avoid repetition? There is even an acronim for that: DRY, Don't Repeat Yourself.
+
+"And," I continued, "the number of lines of code is not always a sign of good work. Your code should be easy to read, easy to understand. Long programs are not always best programs. By the way, short programs are not alwyas the best either. Think about somebody who should read, understand and maintain your program.
+
+"Tomorrow let's try to make your code more readable. Let's use functions for that. Don't worry---it's easy."
 

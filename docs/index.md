@@ -1,17 +1,3 @@
-# Welcome to MkDocs
+# Python Vacation
 
-For full documentation visit [mkdocs.org](http://mkdocs.org).
-
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+This book is written as a series of simple programming exercises which we did with my son during summer vacation. I found out that despite the fact that he has completed one of the online Python courses, he still needed some simple practical projects to use his skills. So we started with simple ordering application with text-based menus, moved to its web-based version, added some styling, then connected it to a database... In other words, a lot of programming adventures during summer vacation. 
