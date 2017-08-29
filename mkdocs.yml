@@ -4,6 +4,11 @@ copyright: Pavel Anni
 use_directory_urls: false
 
 
+extra:
+    palette:
+        primary: 'green'
+        accent: 'deep orange'
+
 pages:
   - Home:  index.md
   - Intro: Python_vacation_outline.md
@@ -11,6 +16,7 @@ pages:
   - Day 1 - Text Dialogues: Python_vacation_day1.md
   - Day 2 - Menus: Python_vacation_day2.md
   - Day 3 - Errors: Python_vacation_day3.md
+  - Day 4 - Functions: Python_vacation_day4.md
 
 theme_dir: mkdocs-material/material
 markdown_extensions:

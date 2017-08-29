@@ -44,7 +44,7 @@
 
 Erik started writing and copying and in a couple minutes his function looked like this:
 
-```
+```python
 def menu(options):
     good_input = False
     while good_input == False:
@@ -87,7 +87,7 @@ He worked a bit more and discovered, "Now I don't have to subtract 1 from the in
 
 He finally came up with this:
 
-```
+```python
 #!/usr/bin/python3
 
 products = ["chocolate", "coffee"]

@@ -11,7 +11,7 @@ It all started on 4th of July. My 13-year old son came home with an idea.
 
 He came back with notes on his iPad, prepared six drinks for his friends and left again.
 
-"Wasn't it a good idea?" he asked me when he cam home with six empty plastic cups. "Yes, great idea," said I. "But..."
+"Wasn't it a good idea?" he asked me when he came home with six empty plastic cups. "Yes, great idea," said I. "But..."
 
 "What 'BUT'??" said Erik.
 
