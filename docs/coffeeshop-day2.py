@@ -9,7 +9,7 @@ flavors = ["caramel",
            "sweetstrawberry",
            "marshmallow",
            "plain"]
-toppings = ["chocolate", "sweetstrawberry"]
+toppings = ["chocolate", "sweetstrawberry", "caramel"]
 
 for i, product in enumerate(products, start=1):
     print(i, product)

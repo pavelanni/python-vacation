@@ -1,3 +1,4 @@
+.git/
 *.pdf
-site/*
-mkdocs-material/*
+site/
+mkdocs-material/

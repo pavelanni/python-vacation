@@ -73,7 +73,7 @@ erik@idea:~$
 
 products = ["chocolate", "coffee"]
 flavors = ["caramel","butterscotch","strawberry","raspberry","blueberry","marshmallow","plain"]
-toppings = ["chocolate", "sweetstrawberry"]
+toppings = ["chocolate", "sweetstrawberry", "caramel"]
 ```
 
 "Good, but let's make a little bit better. Remember, in Python we want to make programs readable. We are very specific when it comes to spaces, tabs, indents. There is even a document which tells people how to make code more readable. It's highly recommended to follow some simple rules. For example, one of the rules is not to make lines longer than 80 characters. You see, in your code the `flavors` list is too long. Why don't we place every flavor on a separate line? Just make sure they are placed one under another. With `gedit` you will use spaces, but other editors usually do it for you."
@@ -90,7 +90,7 @@ flavors = ["caramel",
            "sweetstrawberry",
            "marshmallow",
            "plain"]
-toppings = ["chocolate", "sweetstrawberry"]
+toppings = ["chocolate", "sweetstrawberry", "caramel"]
 ```
 
 "Much, much better," said I. "Also, as we are talking about readability, let's rename the variable `answer` to `product`. It will make more sense, do you agree?"
@@ -184,7 +184,7 @@ flavors = ["caramel",
            "sweetstrawberry",
            "marshmallow",
            "plain"]
-toppings = ["chocolate", "sweetstrawberry"]
+toppings = ["chocolate", "sweetstrawberry", "caramel"]
 
 for i, product in enumerate(products, start=1):
     print(i, product)
@@ -212,6 +212,7 @@ erik@idea:~$ ./coffeeshop.py
 8 plain
 1 chocolate
 2 sweetstrawberry
+3 caramel
 ```
 
 

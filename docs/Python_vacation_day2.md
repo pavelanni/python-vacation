@@ -28,7 +28,7 @@ flavors = ["caramel",
            "sweetstrawberry",
            "marshmallow",
            "plain"]
-toppings = ["chocolate", "sweetstrawberry"]
+toppings = ["chocolate", "sweetstrawberry", "caramel"]
 
 for i, product in enumerate(products, start=1):
     print(i, product)
@@ -66,6 +66,7 @@ erik@idea:~$ ./coffeeshop.py
 7
 1 chocolate
 2 sweetstrawberry
+3 caramel
 1
 1
 ```
@@ -90,7 +91,7 @@ flavors = ["caramel",
            "sweetstrawberry",
            "marshmallow",
            "plain"]
-toppings = ["chocolate", "sweetstrawberry"]
+toppings = ["chocolate", "sweetstrawberry", "caramel"]
 
 for i, product in enumerate(products, start=1):
     print(i, product)
@@ -186,6 +187,7 @@ print("Here is your order: base product: ", products[p_index],
 5
 1 chocolate
 2 sweetstrawberry
+3 caramel
 1
 Here is your order: base product:  coffee , flavor:  sweetstrawberry , topping:  sweetstrawberry
 ```
@@ -196,7 +198,7 @@ Here is your order: base product:  coffee , flavor:  sweetstrawberry , topping: 
 
 "Python, of course, who else??"
 
-"Erik, dear, please remember: computer and Python do only what **you** told them to do. If _your_ program doesn't work as expected, please don't blame Python for that. Just try to think: what could be wrong here? You converted the strings to numbers, that's fine. You used those numbers as indexes for your lists..."
+"Erik, dear, please remember: computer and Python do only what **you** told them to do. If **your** program doesn't work as expected, please don't blame Python for that. Just try to think: what could be wrong here? You converted the strings to numbers, that's fine. You used those numbers as indexes for your lists..."
 
 "A-ha! I understand now! Yesterday we talked about indexes and that they always start with zero. And we used that `start=1` to make our lists more human-readable. Yes, now I see that it took the _next_ element in all three cases! Okay, I will just subtract 1 from the numbers before using them with lists!"
 
@@ -256,6 +258,7 @@ erik@idea:~$ ./coffeeshop.py
 0
 1 chocolate
 2 sweetstrawberry
+3 caramel
 356
 Traceback (most recent call last):
   File "./coffeeshop-day2.py", line 29, in <module>

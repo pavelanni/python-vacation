@@ -98,7 +98,7 @@ flavors = ["caramel",
            "sweetstrawberry",
            "marshmallow",
            "plain"]
-toppings = ["chocolate", "sweetstrawberry"]
+toppings = ["chocolate", "sweetstrawberry", "caramel"]
 
 
 good_input = False
@@ -235,7 +235,7 @@ flavors = ["caramel",
            "sweetstrawberry",
            "marshmallow",
            "plain"]
-toppings = ["chocolate", "sweetstrawberry"]
+toppings = ["chocolate", "sweetstrawberry", "caramel"]
 
 
 good_input = False
@@ -306,7 +306,7 @@ print("Here is your order: base product: ", products[p_index-1],
 
 "We can ask Mom to fix some lunch for us. We have definitely earned it. As for your tiredness, I think we can do something about it too. You see, you've spend some time copying and pasting pieces of code from one menu to another. You have to change it a bit, but only a bit: one variable here, one variable there. There is more efficient way to do this. I am talking about functions. Every time you notice you are repeating yourself, think about functions. Think: is it possible to simplify it and avoid repetition? There is even an acronim for that: DRY, Don't Repeat Yourself.
 
-"And," I continued, "the number of lines of code is not always a sign of good work. Your code should be easy to read, easy to understand. Long programs are not always best programs. By the way, short programs are not alwyas the best either. Think about somebody who should read, understand and maintain your program.
+"And," I continued, "the number of lines of code is not always a sign of good work. Your code should be easy to read, easy to understand. Long programs are not always best programs. By the way, short programs are not alwyas the best either. Think about somebody who should read, understand and maintain your program. Here is a great quote from Wes Dyer: 'Make it correct, make it clear, make it concise, make it fast. In that order.'
 
 "Tomorrow let's try to make your code more readable. Let's use functions for that. Don't worry---it's easy."
 

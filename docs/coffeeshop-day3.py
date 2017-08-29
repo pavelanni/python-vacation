@@ -9,7 +9,7 @@ flavors = ["caramel",
            "sweetstrawberry",
            "marshmallow",
            "plain"]
-toppings = ["chocolate", "sweetstrawberry"]
+toppings = ["chocolate", "sweetstrawberry", "caramel"]
 
 
 good_input = False
