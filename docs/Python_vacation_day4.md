@@ -14,7 +14,7 @@
 
 "You said in your program you had to copy and paste some pieces of code several times. What did that code do?"
 
-"Don't you remember?" Erik tried to be patient. "I have three menus in my coffee shop program: one for base product, one for flavor, and one for topping. And in all three menus I have to do that garbage checking, number checking and all that."
+"Don't you remember?" Erik tried to be patient. "I have three menus in my coffee shop program: one for base product, one for flavor, and one for topping. And in all three menus, I have to do that garbage checking, number checking and all that."
 
 "Okay," I said. "Why don't we create a function that will do all these boring things and call it three times?"
 
@@ -28,15 +28,15 @@
 
 "What do you mean---'return'?" asked Erik.
 
-"Well, imagine I asked you: 'Erik, please go to your room and count how many model planes you have.' You would go and count them and return to me with a number, right? Functions do the same thing: they perform some action and come back with the result. And usually I don't care how they do what I asked them to do, I'm interested in the result. Like when I asked you to count your planes, I don't care if you use your fingers, or a piece of paper, or any more sophisticated method. In our case we have to write a function which will take a list of options, print it out as a menu and let the user chose from the menu. When the user makes their choice---a number in the menu---the function will remember it and bring it to us. There is a special word for that in Python: `return`. We are not going to return the name of a flavor, we'll just return its index in the list."
+"Well, imagine I asked you: 'Erik, please go to your room and count how many model planes you have.' You would go and count them and return to me with a number, right? Functions do the same thing: they perform some action and come back with the result. And usually I don't care how they do what I asked them to do, I'm interested in the result. Like when I asked you to count your planes, I don't care if you use your fingers, or a piece of paper, or any more sophisticated method. In our case we have to write a function which will take a list of options, print it out as a menu and let the user chose from the menu. When the user makes their choice---a number from the menu---the function will remember it and bring it to us. There is a special word for that in Python: `return`. We are not going to return the name of a flavor, we'll just return its index in the list."
 
 "Yes, I remember that `return` from the class!" said Erik.
 
-"Good. Now we have to make a very difficult decision: how to name our function. Don't laugh, it is really very serious. When you write programs just a little longer than this one, it's pretty easy to get lost in different variable and function names. So, please, always think about naming. Don't call your functions `f()` or `d4()` --- you will never remember what this means. Choose some meaningful names that show what this function does. The same applies to variables. Only if it's just a simple obscure index in a loop, then it's okay to call it `i` or `k`. In other cases, please use something readable. Also, in Python we use underscore to combine words for variable and function names. Like  `base_product` or `good_input`."
+"Good. Now we have to make a very difficult decision: how to name our function. Don't laugh, it is really very serious. When you write programs just a little longer than this one, it's pretty easy to get lost in different variable and function names. So, please, always think about naming. Don't call your functions `f()` or `d4()` --- you will never remember what this means. Choose some meaningful names that show what this function does. The same applies to variables. Only if it's just a simple obscure index in a loop, then it's okay to call it `i` or `k`. In other cases, please use something readable. Also, in Python, we use underscore to combine words for variable and function names. Like  `base_product` or `good_input`."
 
 "I saw names without underscores, but with lower and upper case letters," said Erik.
 
-"Yes, it's called CamelCase. You see, it looks like camel humps? In Python we usually use them to define classes. We'll talk about classes later."
+"Yes, it's called CamelCase. You see, it looks like camel humps? In Python, we usually use them to define classes. We'll talk about classes later."
 
 "Okay, I'm ready. Let's call our function `menu`. I know that I have to use `def` to start writing it. And also I have to put something inside the parenthesis. Should it be the list of options?"
 
@@ -69,21 +69,21 @@ def menu(options):
 
 "What should I do with this prompt? It asks about the base product, but I want to use this function for flavors and toppings too," asked Erik.
 
-I said, "Good question. If you want to reuse your function, you should move everything that is specific to some particular case, outside of the function. I suggest we ask this question _before_ calling the function, in the main program. You will ask about base product and call the function with the list of base products, you ask about flavors and pass the list of flavors as a parameter."
+I said, "Good question. If you want to reuse your function, you should move everything that is specific to some particular case, outside of the function. I suggest we ask this question _before_ calling the function, in the main program. You will ask about the base product and call the function with the list of base products, you ask about flavors and pass the list of flavors as a parameter."
 
-"Okay," said Erik. "I'll remove it. Now I have to rewrite the main program and use function in it, right?"
+"Okay," said Erik. "I'll remove it. Now I have to rewrite the main program and use functions in it, right?"
 
 "Go ahead!"
 
-He started working. After a while he asked, "I use `p_index` both in the function and in the main program. Should I rename it?"
+He started working. After a while, he asked, "I use `p_index` both in the function and in the main program. Should I rename it?"
 
-"From Python prespective, that's OK. It sees those variables differently. `p_index` in the main program and `p_index` inside a function are different variables. But from a readability perspective, I'd suggest to rename it inside the function. It's better to avoid using same variable names inside functions and in the main program. Unless, of course, they are as simple as `a`, `i`, `x`, which are usually temporary variables. So, rename it inside the function to something short but meaningful."
+"From Python perspective, that's OK. It sees those variables differently. `p_index` in the main program and `p_index` inside a function are different variables. But from a readability perspective, I'd suggest to rename it inside the function. It's better to avoid using same variable names inside functions and in the main program. Unless, of course, they are as simple as `a`, `i`, `x`, which are usually temporary variables. So, rename it inside the function to something short but meaningful."
 
-"It will be `p_int`," said Erik. Then he thought for a while and said, "But it starts with `p` because I copied it from the products menu. In the function it doesn't make sense anymore. I'll rename `p` to `choice` and `p_index` to `choice_int` because we convert it to integer."
+"It will be `p_int`," said Erik. Then he thought for a while and said, "But it starts with `p` because I copied it from the products menu. In the function, it doesn't make sense anymore. I'll rename `p` to `choice` and `p_index` to `choice_int` because we convert it to an integer."
 
 "Great idea!" I said.
 
-He worked a bit more and discovered, "Now I don't have to subtract 1 from the indexes in my final `print`, because I have already done it in the function!"
+He worked a bit more and discovered, "Now I don't have to subtract 1 from the indexes in my final `print` because I have already done it in the function!"
 
 He finally came up with this:
 
@@ -142,7 +142,7 @@ He tested it and it worked perfectly! He even tried to enter "wrong" choices and
 
 Erik was happy. He was so happy that he even suggested: "I want to add something to the program. Like we did in that online course, I want to ask the customer for his name and then print it out together with his order!"
 
-"Good idea!" I said. After a while his program printed out: `Hello, Erik! Here is your order ...`
+"Good idea!" I said. After a while, his program printed out: `Hello, Erik! Here is your order ...`
 
 "Much better now," I said. "Now, let's plan our next steps."
 

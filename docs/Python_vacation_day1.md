@@ -16,7 +16,7 @@ Next day we decided to get right to the Coffee Shop application. Erik has done e
 
 Erik created a file and saved it as `coffeeshop.py`.
 
-"What should be in the beginning of each Python script?" asked I.
+"What should be at the beginning of each Python script?" asked I.
 
 "Something about python3 with some cryptic letters in the beginning. Let me check in my `hello.py` file. Oh, right, it should be `#!/usr/bin/python3`. "
 
@@ -76,7 +76,7 @@ flavors = ["caramel","butterscotch","strawberry","raspberry","blueberry","marshm
 toppings = ["chocolate", "sweetstrawberry", "caramel"]
 ```
 
-"Good, but let's make a little bit better. Remember, in Python we want to make programs readable. We are very specific when it comes to spaces, tabs, indents. There is even a document which tells people how to make code more readable. It's highly recommended to follow some simple rules. For example, one of the rules is not to make lines longer than 80 characters. You see, in your code the `flavors` list is too long. Why don't we place every flavor on a separate line? Just make sure they are placed one under another. With `gedit` you will use spaces, but other editors usually do it for you."
+"Good, but let's make a little bit better. Remember, in Python, we want to make programs readable. We are very specific when it comes to spaces, tabs, indents. There is even a document which tells people how to make code more readable. It's highly recommended to follow some simple rules. For example, one of the rules is not to make lines longer than 80 characters. You see, in your code, the `flavors` list is too long. Why don't we place every flavor on a separate line? Just make sure they are placed one under another. With `gedit` you will use spaces, but other editors usually do it for you."
 
 After tapping [Space] and [Enter] several tiems Erik came up with this:
 
@@ -95,7 +95,7 @@ toppings = ["chocolate", "sweetstrawberry", "caramel"]
 
 "Much, much better," said I. "Also, as we are talking about readability, let's rename the variable `answer` to `product`. It will make more sense, do you agree?"
 
-"Okay, done. What's next? Somehow I should print products, flavors and toppings and then ask for input, right?"
+"Okay, done. What's next? Somehow I should print products, flavors, and toppings and then ask for input, right?"
 
 "Absolutely right! How do you print a list line by line? What in Python can do things several times in a row?"
 
@@ -109,7 +109,7 @@ toppings = ["chocolate", "sweetstrawberry", "caramel"]
 
 "I remember that `while` loop you can run forever. And `for` loop you repeat step by step several times, " said Erik.
 
-"So, how do you do something with every element in a list in Python? Like print it, for example. You can Google it, not a problem."
+"So, how do you do something with every element in a list in Python? Like, print it, for example. You can Google it, not a problem."
 
 He opened a new tab and asked Google: `python loop list`. After going through several sites he finally found this page: (http://treyhunner.com/2016/04/how-to-loop-with-indexes-in-python/) and typed right after the list definitions in his script:
 
@@ -153,7 +153,7 @@ He tried to run it and got this:
 
 "But it starts with zero!" said Erik. "A-ha, I understand, it's because indexes in Python start with zero."
 
-"Great that you remember that! It's one of the most fundamental concepts in programming! Of course, I'm joking, but only partly joking," said I. "You can chage that. Smart people, who wrote the `enumerate()` function, predicted that somebody will need to show such a list to non-programmers and start it with '1'. So you can add this parameter right after `flavors`: add a comma and type `start=1`."
+"Great that you remember that! It's one of the most fundamental concepts in programming! Of course, I'm joking, but only partly joking," said I. "You can change that. Smart people, who wrote the `enumerate()` function, predicted that somebody will need to show such a list to non-programmers and start it with '1'. So you can add this parameter right after `flavors`: add a comma and type `start=1`."
 
 Erik changed his code to this:
 

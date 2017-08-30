@@ -15,7 +15,7 @@ He came back with notes on his iPad, prepared six drinks for his friends and lef
 
 "What 'BUT'??" said Erik.
 
-"You see, you used your iPad to take orders, but you used it just as a notepad. It would be much easier to take just a notepad and a pencil with you for that. With iPad you can do it in much better way..."
+"You see, you used your iPad to take orders, but you used it just as a notepad. It would be much easier to take just a notepad and a pencil with you for that. With iPad, you can do it in much better way..."
 
 "How?"
 
@@ -34,7 +34,7 @@ I have to admit, my son uses Linux on his laptop. I know, it's torture for a 13-
 
 ## First lines of code
 
-"In the terminal type 'python3'," I said to Erik. Yes, I know there is a never-ending discussion "Python 2 vs. Python 3", but at least it seems there is a consensus that if you are just starting learning Python, it's better to start with Python 3. You mileage may vary, of course. 
+"In the terminal type 'python3'," I said to Erik. Yes, I know there is a never-ending discussion "Python 2 vs. Python 3", but at least it seems there is a consensus that if you are just starting learning Python, it's better to start with Python 3. Your mileage may vary, of course. 
 
 ```console
 erik@idea:~$ python3
@@ -56,7 +56,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 "Barely..."
 
-"Well, I'll help you. There is a function called `input()`. It can ask a question and you put this question in quotes into parenthesis. And then the function waits for the user to type something and press <kbd>Enter</kbd>. After that the function __returns__ a value. You can take that value and assign it to a variable. "
+"Well, I'll help you. There is a function called `input()`. It can ask a question and you put this question in quotes into parenthesis. And then the function waits for the user to type something and press <kbd>Enter</kbd>. After that, the function __returns__ a value. You can take that value and assign it to a variable. "
 
 Erik's face showed that he is beginning to recall something from that Python course. Suddenly there was a connection between abstract things like __functions__ and his friends and cups of Frappuccino. "And to assign something to a variable I type its name and then 'equal' sign and then the value, right?"
 
@@ -74,7 +74,7 @@ Erik's face showed that he is beginning to recall something from that Python cou
 
 "Remember: computer only does what you tell it to do. Did you tell it to ask you a question?"
 
-"No... A-ha, I know! You said that I have to put the question between the parethesis. But what should I do now. It doesn't show the prompt."
+"No... A-ha, I know! You said that I have to put the question between the parenthesis. But what should I do now? It doesn't show the prompt."
 
 "It's because it is waiting for your input. Say something and press <kbd>Enter</kbd>"
 
@@ -108,7 +108,7 @@ coffee
 
 "I asked them which flavor they want and also which topping."
 
-"Go ahead and ask those questions with Python. But you will need more variables, right? This time let's use `flavor` and `topping`, okay?"
+"Go ahead and ask those questions with Python. But you will need more variables, right? This time let's use `flavor` and `topping`, Okay?"
 
 "Okay," said Erik and typed:
 
@@ -163,7 +163,7 @@ You have ordered  coffee  with  strawberry  flavor and  chocolate  topping. Than
 
 Erik opened a new file in `gedit` and wrote:
 
-``` python3
+``` python
 print('Hello, World')
 ```
 
@@ -178,11 +178,11 @@ Hello, World
 
 "It works!" said Erik. 
 
-"Of course, it works, why shouldn't it? That was easy. Now let's make two things which will convert our script into an application. First, place the following string in the very beginning of your script: `#!/usr/bin/python3`. This will tell Linux that it's a Python script and that we want to use Python 3 for it. Second, go to the terminal and make this script executable."
+"Of course, it works, why shouldn't it? That was easy. Now let's make two things which will convert our script into an application. First, place the following string at the very beginning of your script: `#!/usr/bin/python3`. This will tell Linux that it's a Python script and that we want to use Python 3 for it. Second, go to the terminal and make this script executable."
 
 "How do I do that?"
 
-"Yeah, it seems you need another course, on Linux basic commands... Okay, this time I will help you. Type `chmod a+x hello.py`. After that you will be able to run your script without `python3` in front of it, just like this `./hello.py`. "
+"Yeah, it seems you need another course, on Linux basic commands... Okay, this time I will help you. Type `chmod a+x hello.py`. After that, you will be able to run your script without `python3` in front of it, just like this `./hello.py`. "
 
 "And what does this 'dot-slash' mean?"
 
@@ -199,5 +199,5 @@ Hello, World
 
 "But that was very simple. I want to work on my Coffee Shop application!"
 
-"Let's take a break and continue tomorrow, okay?"
+"Let's take a break and continue tomorrow, Okay?"
 

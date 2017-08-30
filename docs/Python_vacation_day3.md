@@ -2,7 +2,7 @@
 
 ## Errors and what to do about them
 
-Next day Erik was in better mood. It seemed he forgot how I tortured his beautiful program. But we were going to talk about errors and exceptions so I had to remind him about yesterday.
+Next day Erik was in a better mood. It seemed he forgot how I tortured his beautiful program. But we were going to talk about errors and exceptions so I had to remind him about yesterday.
 
 "Remember what we did last time?"
 
@@ -12,7 +12,7 @@ Next day Erik was in better mood. It seemed he forgot how I tortured his beautif
 
 "Okay, okay... You said something about 'exceptions' last time. What is it?"
 
-"There are a lot of situations when a Python program could break. Wrong input, division by zero, wrong list index--if your list has 5 elements and you are trying to access its 10th element. If you don't do anything about these cases, your Python program just breaks and stops. Sometimes it's okay, if something really bad is happening. But most of the times you shouldn't stop your program and just inform the user that an error happened and she should repeat her input. For example, if instead of a number she enters letters, we should tell her that it's not what we expect and return back to the input prompt. By the way, you haven't created an input prompt so far. I think you should add something like 'Please, choose from this list of base products or flavors'. " 
+"There are a lot of situations when a Python program could break. Wrong input, division by zero, wrong list index--if your list has 5 elements and you are trying to access its 10th element. If you don't do anything about these cases, your Python program just breaks and stops. Sometimes it's okay---if something really bad is happening. But most of the times you shouldn't stop your program and just inform the user that an error happened and she should repeat her input. For example, if instead of a number she enters letters, we should tell her that it's not what we expect and return back to the input prompt. By the way, you haven't created an input prompt so far. I think you should add something like 'Please, choose from this list of base products or flavors'. " 
 
 "That's easy," said Erik. "I can do that right now. But I will need your help with those 'excephtions'. And also, how do we return back to the input?"
 
@@ -20,11 +20,11 @@ Next day Erik was in better mood. It seemed he forgot how I tortured his beautif
 
 "A loop?" guessed Erik.
 
-"That's right! But which loop? In this case we have to repeat our input prompt until the user enters the _right_ thing. Or, in other words, while he continues entering the _wrong_ thing. You see where I am going?"
+"That's right! But which loop? In this case, we have to repeat our input prompt until the user enters the _right_ thing. Or, in other words, while he continues entering the _wrong_ thing. You see where I am going?"
 
 "Of course! It should be a `while` loop!" said Erik.
 
-I decided to help him a little bit. "I suggest using a variable like `good_input` and set it to False initially. Then it will be a condition of the loop: if the input is not good yet, conitnue. If the input is good, i.e. is integer and in the right range, then exit from the loop. Let's put aside the exceptions part for now and work on the number ranges. You know what to check, right?"
+I decided to help him a little bit. "I suggest using a variable like `good_input` and set it to False initially. Then it will be a condition of the loop: if the input is not good yet, continue. If the input is good, i.e. is an integer and in the right range, then exit from the loop. Let's put aside the exceptions part for now and work on the number ranges. You know what to check, right?"
 
 "Yes, let me try it," said Erik and started coding.
 
@@ -152,7 +152,7 @@ Traceback (most recent call last):
 ValueError: invalid literal for int() with base 10: 'ghkflkjhdg'
 ```
 
-"Look at this last message. You see: Python tells us that we have entered an invalid literal for integer number. Which means: anything besides letters from 0 to 9. Also it's interesting that Python tells us that they are invalid for 'base 10'. Which means for decimal system. If we tried to convert it as a hexadecimal number, some letters wouldn't be complete gibberish. Like for example if you would enter `ffdfdffdfd` and tried to convert it as hexadecimal number (i.e. with base=16), it would be absolutely fine. But I digressed.
+"Look at this last message. You see: Python tells us that we have entered an invalid literal for an integer number. Which means: anything besides letters from 0 to 9. Also, it's interesting that Python tells us that they are invalid for 'base 10'. Which means for the decimal system. If we tried to convert it as a hexadecimal number, some letters wouldn't be complete gibberish. Like for example if you would enter `ffdfdffdfd` and tried to convert it as a hexadecimal number (i.e. with base=16), it would be absolutely fine. But I digressed.
 
 "`ValueError` is the word which tells us that there is an exception and we should handle it somehow. There are other errors: `SyntaxError`, `ZeroDivisionError`, `TypeError`... You can find some examples in the Python official tutorial here: (https://docs.python.org/3/tutorial/errors.html). Let's take an example from the tutorial, it does exactly what we want. Look:"
 
@@ -175,7 +175,7 @@ Erik thought for a second and said: "I think checking for gibberish should come 
 
 After struggling with the code for a minute he asked: "What does this `break` mean?"
 
-"It's a way to exit the `while` loop. In this example they decided not to use a condition in the `while` statement and they just put `True` in it. That means the loop will go forever unless we exit from it using this `break` keyword. And, as you can see, in the example they exit the loop if the input can be converted to a number. If this is not the case (somebody has entered letters), then they raise an exception and continue the loop. In our case even if we see that the input has only numbers, it's too early to exit the loop. We should go ahead and check if the number is in the range, right?"
+"It's a way to exit the `while` loop. In this example, they decided not to use a condition in the `while` statement and they just put `True` in it. That means the loop will go forever unless we exit from it using this `break` keyword. And, as you can see, in the example they exit the loop if the input can be converted to a number. If this is not the case (somebody has entered letters), then they raise an exception and continue the loop. In our case even if we see that the input has only numbers, it's too early to exit the loop. We should go ahead and check if the number is in the range, right?"
 
 "So what should we put instead of `break` here?"
 
@@ -183,7 +183,7 @@ After struggling with the code for a minute he asked: "What does this `break` me
 
 "And if our `try` wasn't successful we tell the user that he should enter a number, not stupid letters, right?"
 
-"Yes, but not only that. After you told the user about his mistake, you should go back to the beginning of the loop. In Python we use the word `continue` for that. And then we start all over again: check the condition and decide if you continue or not. In our case we haven't change the condition, `good_input` is still `False` so we'll continue with the prompt asking to choose the base product."
+"Yes, but not only that. After you told the user about his mistake, you should go back to the beginning of the loop. In Python, we use the word `continue` for that. And then we start all over again: check the condition and decide if you continue or not. In our case we haven't change the condition, `good_input` is still `False` so we'll continue with the prompt asking to choose the base product."
 
 "Should I put `continue` after my error message?"
 
@@ -215,7 +215,7 @@ He ran the script and tried to enter all kinds of garbage---the program always r
 
 "Now go ahead and copy this code in the other menus," said I.
 
-Erik worked for a while, testing the script from time to time, muttering and cursing along the way. As the old saying goes: "What is the most popular programming language? Profanity." As a good parent I probably should've told him not to use some words, but I had a different task right now. 
+Erik worked for a while, testing the script from time to time, muttering and cursing along the way. As the old saying goes: "What is the most popular programming language? Profanity." As a good parent, I probably should've told him not to use some words, but I had a different task right now. 
 
 "It works now!" he said finally. 
 
@@ -304,9 +304,9 @@ print("Here is your order: base product: ", products[p_index-1],
 
 "Yes, I am! And hungry!"
 
-"We can ask Mom to fix some lunch for us. We have definitely earned it. As for your tiredness, I think we can do something about it too. You see, you've spend some time copying and pasting pieces of code from one menu to another. You have to change it a bit, but only a bit: one variable here, one variable there. There is more efficient way to do this. I am talking about functions. Every time you notice you are repeating yourself, think about functions. Think: is it possible to simplify it and avoid repetition? There is even an acronim for that: DRY, Don't Repeat Yourself.
+"We can ask Mom to fix some lunch for us. We have definitely earned it. As for your tiredness, I think we can do something about it too. You see, you've spent some time copying and pasting pieces of code from one menu to another. You had to change it a bit, but only a bit: one variable here, one variable there, but still it took a lot of time. There is more efficient way to do this. I am talking about functions. Every time you notice you are repeating yourself, think about functions. Think: is it possible to simplify it and avoid repetition? There is even an acronym for that: DRY, Don't Repeat Yourself.
 
-"And," I continued, "the number of lines of code is not always a sign of good work. Your code should be easy to read, easy to understand. Long programs are not always best programs. By the way, short programs are not alwyas the best either. Think about somebody who should read, understand and maintain your program. Here is a great quote from Wes Dyer: 'Make it correct, make it clear, make it concise, make it fast. In that order.'
+"And," I continued, "the number of lines of code is not always a sign of good work. Your code should be easy to read, easy to understand. Long programs are not always best programs. By the way, short programs are not always the best either. Think about somebody who should read, understand and maintain your program. Here is a great quote from Wes Dyer, a well known programmer: 'Make it correct, make it clear, make it concise, make it fast. In that order.'
 
 "Tomorrow let's try to make your code more readable. Let's use functions for that. Don't worry---it's easy."
 
