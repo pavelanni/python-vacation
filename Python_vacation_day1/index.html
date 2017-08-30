@@ -291,7 +291,7 @@
 <p>&ldquo;And then we saved the input to a variable and then printed it like &lsquo;You&rsquo;ve ordered this and that&rsquo;. &ldquo;</p>
 <p>&ldquo;Okay, good. Now let&rsquo;s do the same thing in the script. Open a new file and save it right away&ndash;you know, I don&rsquo;t like when you have a bunch of files called <code>Untitled</code> in your home directory.&rdquo;</p>
 <p>Erik created a file and saved it as <code>coffeeshop.py</code>.</p>
-<p>&ldquo;What should be in the beginning of each Python script?&rdquo; asked I.</p>
+<p>&ldquo;What should be at the beginning of each Python script?&rdquo; asked I.</p>
 <p>&ldquo;Something about python3 with some cryptic letters in the beginning. Let me check in my <code>hello.py</code> file. Oh, right, it should be <code>#!/usr/bin/python3</code>. &ldquo;</p>
 <p>&ldquo;You&rsquo;re right! I&rsquo;m sure pretty soon you will write it automatically, without a cheat sheet! Now write the <code>input()</code> dialog, like you did yesterday in the console session. Remember?&rdquo;</p>
 <p>&ldquo;Yes!&rdquo; said he and started typing. A couple minutes later he showed me the script.</p>
@@ -331,7 +331,7 @@
 <span class="n">toppings</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;chocolate&quot;</span><span class="p">,</span> <span class="s2">&quot;sweetstrawberry&quot;</span><span class="p">,</span> <span class="s2">&quot;caramel&quot;</span><span class="p">]</span>
 </pre></div>
 
-<p>&ldquo;Good, but let&rsquo;s make a little bit better. Remember, in Python we want to make programs readable. We are very specific when it comes to spaces, tabs, indents. There is even a document which tells people how to make code more readable. It&rsquo;s highly recommended to follow some simple rules. For example, one of the rules is not to make lines longer than 80 characters. You see, in your code the <code>flavors</code> list is too long. Why don&rsquo;t we place every flavor on a separate line? Just make sure they are placed one under another. With <code>gedit</code> you will use spaces, but other editors usually do it for you.&rdquo;</p>
+<p>&ldquo;Good, but let&rsquo;s make a little bit better. Remember, in Python, we want to make programs readable. We are very specific when it comes to spaces, tabs, indents. There is even a document which tells people how to make code more readable. It&rsquo;s highly recommended to follow some simple rules. For example, one of the rules is not to make lines longer than 80 characters. You see, in your code, the <code>flavors</code> list is too long. Why don&rsquo;t we place every flavor on a separate line? Just make sure they are placed one under another. With <code>gedit</code> you will use spaces, but other editors usually do it for you.&rdquo;</p>
 <p>After tapping [Space] and [Enter] several tiems Erik came up with this:</p>
 <div class="codehilite"><pre><span></span><span class="n">products</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;chocolate&quot;</span><span class="p">,</span> <span class="s2">&quot;coffee&quot;</span><span class="p">]</span>
 <span class="n">flavors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;caramel&quot;</span><span class="p">,</span>
@@ -346,14 +346,14 @@
 </pre></div>
 
 <p>&ldquo;Much, much better,&rdquo; said I. &ldquo;Also, as we are talking about readability, let&rsquo;s rename the variable <code>answer</code> to <code>product</code>. It will make more sense, do you agree?&rdquo;</p>
-<p>&ldquo;Okay, done. What&rsquo;s next? Somehow I should print products, flavors and toppings and then ask for input, right?&rdquo;</p>
+<p>&ldquo;Okay, done. What&rsquo;s next? Somehow I should print products, flavors, and toppings and then ask for input, right?&rdquo;</p>
 <p>&ldquo;Absolutely right! How do you print a list line by line? What in Python can do things several times in a row?&rdquo;</p>
 <p>&ldquo;A loop?&rdquo;</p>
 <p>&ldquo;Right, a loop. But which loop? What kinds of loops do you know in Python?&rdquo;</p>
 <p>&ldquo;I remember there is a <code>while</code> loop and a <code>for</code> loop.&rdquo;</p>
 <p>&ldquo;Right. And what is the difference between them? Which one can help us here with lists?&rdquo;</p>
 <p>&ldquo;I remember that <code>while</code> loop you can run forever. And <code>for</code> loop you repeat step by step several times, &rdquo; said Erik.</p>
-<p>&ldquo;So, how do you do something with every element in a list in Python? Like print it, for example. You can Google it, not a problem.&rdquo;</p>
+<p>&ldquo;So, how do you do something with every element in a list in Python? Like, print it, for example. You can Google it, not a problem.&rdquo;</p>
 <p>He opened a new tab and asked Google: <code>python loop list</code>. After going through several sites he finally found this page: (<a href="http://treyhunner.com/2016/04/how-to-loop-with-indexes-in-python/">http://treyhunner.com/2016/04/how-to-loop-with-indexes-in-python/</a>) and typed right after the list definitions in his script:</p>
 <div class="codehilite"><pre><span></span><span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">products</span><span class="p">:</span>
     <span class="k">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
@@ -382,7 +382,7 @@
 </pre></div>
 
 <p>&ldquo;But it starts with zero!&rdquo; said Erik. &ldquo;A-ha, I understand, it&rsquo;s because indexes in Python start with zero.&rdquo;</p>
-<p>&ldquo;Great that you remember that! It&rsquo;s one of the most fundamental concepts in programming! Of course, I&rsquo;m joking, but only partly joking,&rdquo; said I. &ldquo;You can chage that. Smart people, who wrote the <code>enumerate()</code> function, predicted that somebody will need to show such a list to non-programmers and start it with &lsquo;1&rsquo;. So you can add this parameter right after <code>flavors</code>: add a comma and type <code>start=1</code>.&rdquo;</p>
+<p>&ldquo;Great that you remember that! It&rsquo;s one of the most fundamental concepts in programming! Of course, I&rsquo;m joking, but only partly joking,&rdquo; said I. &ldquo;You can change that. Smart people, who wrote the <code>enumerate()</code> function, predicted that somebody will need to show such a list to non-programmers and start it with &lsquo;1&rsquo;. So you can add this parameter right after <code>flavors</code>: add a comma and type <code>start=1</code>.&rdquo;</p>
 <p>Erik changed his code to this:</p>
 <div class="codehilite"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">product</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">products</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
     <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">product</span><span class="p">)</span>
