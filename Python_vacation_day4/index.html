@@ -1,0 +1,437 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+        <meta name="author" content="Pavel Anni">
+      
+      
+        <link rel="shortcut icon" href="../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.8.1">
+    
+    
+      
+        <title>Day 4 - Functions - Python Vacation</title>
+      
+    
+    
+      <script src="../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application-bfecc7305d.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-02c2a4388f.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="green" data-md-color-accent="deep-orange">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="../index.html" title="Python Vacation" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+            
+            Day 4 - Functions
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    Python Vacation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../index.html" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Python_vacation_outline/index.html" title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Python_vacation_day0/index.html" title="Day 0 - Hello, World" class="md-nav__link">
+      Day 0 - Hello, World
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Python_vacation_day1/index.html" title="Day 1 - Text Dialogues" class="md-nav__link">
+      Day 1 - Text Dialogues
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Python_vacation_day2/index.html" title="Day 2 - Menus" class="md-nav__link">
+      Day 2 - Menus
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Python_vacation_day3/index.html" title="Day 3 - Errors" class="md-nav__link">
+      Day 3 - Errors
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+    <a href="index.html" title="Day 4 - Functions" class="md-nav__link md-nav__link--active">
+      Day 4 - Functions
+    </a>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="python-vacation-day-4">Python Vacation &ndash; Day 4</h1>
+<p>&ldquo;Remember where we stopped last time?&rdquo; I asked Erik.</p>
+<p>&ldquo;Yes, you said that we are going to work with functions and that will make my program shorter.&rdquo;</p>
+<p>&rdquo;&hellip;And easier to read and understand!&rdquo; added I. &ldquo;What do you remember about Python functions from your online class?&rdquo;</p>
+<p>&ldquo;They start with <code>def</code>. You have to indent lines inside the function. You can call functions from your main program.&rdquo;</p>
+<p>&ldquo;Good! Also very important that you can pass <em>parameters</em> into functions so you can call them many times and they will do slightly different things depending on the parameters. Like saying &lsquo;Hello&rsquo; and then a person&rsquo;s name.&rdquo;</p>
+<p>&ldquo;Yes, I remember, we did this in our online course!&rdquo; exclaimed Erik. It was good to see that those couple weeks were not lost completely.</p>
+<p>&ldquo;You said in your program you had to copy and paste some pieces of code several times. What did that code do?&rdquo;</p>
+<p>&ldquo;Don&rsquo;t you remember?&rdquo; Erik tried to be patient. &ldquo;I have three menus in my coffee shop program: one for base product, one for flavor, and one for topping. And in all three menus I have to do that garbage checking, number checking and all that.&rdquo;</p>
+<p>&ldquo;Okay,&rdquo; I said. &ldquo;Why don&rsquo;t we create a function that will do all these boring things and call it three times?&rdquo;</p>
+<p>&ldquo;Yes, that would be good. And also if I want to change or add something, I&rsquo;ll do it in one place, instead of copying it three times. But I have different flavors and toppings&mdash;how will this function know which menu I want to use?&rdquo;</p>
+<p>&ldquo;You said you had to change something while copying pieces of code into the menus. What was that?&rdquo;</p>
+<p>&ldquo;Oh, all different variables. The variable for the <code>input()</code> function, the index variable. And also the list name&mdash;to print out the menu and to calculate its length.&rdquo;</p>
+<p>&ldquo;Good. So, as far as I can see, the only thing which needs to change is the list of options. It&rsquo;s either base product, flavor, or topping. Input variable and list index can be the reused inside the function. We&rsquo;ll just return the index as a result.&rdquo;</p>
+<p>&ldquo;What do you mean&mdash;&lsquo;return&rsquo;?&rdquo; asked Erik.</p>
+<p>&ldquo;Well, imagine I asked you: &lsquo;Erik, please go to your room and count how many model planes you have.&rsquo; You would go and count them and return to me with a number, right? Functions do the same thing: they perform some action and come back with the result. And usually I don&rsquo;t care how they do what I asked them to do, I&rsquo;m interested in the result. Like when I asked you to count your planes, I don&rsquo;t care if you use your fingers, or a piece of paper, or any more sophisticated method. In our case we have to write a function which will take a list of options, print it out as a menu and let the user chose from the menu. When the user makes their choice&mdash;a number in the menu&mdash;the function will remember it and bring it to us. There is a special word for that in Python: <code>return</code>. We are not going to return the name of a flavor, we&rsquo;ll just return its index in the list.&rdquo;</p>
+<p>&ldquo;Yes, I remember that <code>return</code> from the class!&rdquo; said Erik.</p>
+<p>&ldquo;Good. Now we have to make a very difficult decision: how to name our function. Don&rsquo;t laugh, it is really very serious. When you write programs just a little longer than this one, it&rsquo;s pretty easy to get lost in different variable and function names. So, please, always think about naming. Don&rsquo;t call your functions <code>f()</code> or <code>d4()</code> &mdash; you will never remember what this means. Choose some meaningful names that show what this function does. The same applies to variables. Only if it&rsquo;s just a simple obscure index in a loop, then it&rsquo;s okay to call it <code>i</code> or <code>k</code>. In other cases, please use something readable. Also, in Python we use underscore to combine words for variable and function names. Like  <code>base_product</code> or <code>good_input</code>.&rdquo;</p>
+<p>&ldquo;I saw names without underscores, but with lower and upper case letters,&rdquo; said Erik.</p>
+<p>&ldquo;Yes, it&rsquo;s called CamelCase. You see, it looks like camel humps? In Python we usually use them to define classes. We&rsquo;ll talk about classes later.&rdquo;</p>
+<p>&ldquo;Okay, I&rsquo;m ready. Let&rsquo;s call our function <code>menu</code>. I know that I have to use <code>def</code> to start writing it. And also I have to put something inside the parenthesis. Should it be the list of options?&rdquo;</p>
+<p>&ldquo;Exactly!&rdquo; said I. I was proud of my boy. You know, teenagers are always like that: sometimes they surprise you with their brilliant minds, but sometimes they struggle with simple arithmetics. &ldquo;Call it <code>options</code>, for example. You do remember that you should put the colon after parenthesis and indent the function body, don&rsquo;t you? You can copy most of the function body from what you have written already. Don&rsquo;t forget to return the index and don&rsquo;t forget that when we show <code>1</code> to the user, we have <code>0</code> in mind. So add some necessary arithmetics to the function. Enough instructions, go ahead and write it!&rdquo;</p>
+<p>Erik started writing and copying and in a couple minutes his function looked like this:</p>
+<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">menu</span><span class="p">(</span><span class="n">options</span><span class="p">):</span>
+    <span class="n">good_input</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="k">while</span> <span class="n">good_input</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Choose your base product from the menu (press the number):&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">option</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">options</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">option</span><span class="p">)</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">p_index</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+        <span class="k">except</span>  <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Error: you should enter a NUMBER!&quot;</span><span class="p">)</span>
+            <span class="k">continue</span>
+
+        <span class="k">if</span> <span class="n">p_index</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">options</span><span class="p">)</span> <span class="ow">and</span> <span class="n">p_index</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">:</span>
+            <span class="n">good_input</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;You should enter a number between 1 and &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">options</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">p_index</span><span class="o">-</span><span class="mi">1</span>
+</pre></div>
+
+<p>&ldquo;What should I do with this prompt? It asks about the base product, but I want to use this function for flavors and toppings too,&rdquo; asked Erik.</p>
+<p>I said, &ldquo;Good question. If you want to reuse your function, you should move everything that is specific to some particular case, outside of the function. I suggest we ask this question <em>before</em> calling the function, in the main program. You will ask about base product and call the function with the list of base products, you ask about flavors and pass the list of flavors as a parameter.&rdquo;</p>
+<p>&ldquo;Okay,&rdquo; said Erik. &ldquo;I&rsquo;ll remove it. Now I have to rewrite the main program and use function in it, right?&rdquo;</p>
+<p>&ldquo;Go ahead!&rdquo;</p>
+<p>He started working. After a while he asked, &ldquo;I use <code>p_index</code> both in the function and in the main program. Should I rename it?&rdquo;</p>
+<p>&ldquo;From Python prespective, that&rsquo;s OK. It sees those variables differently. <code>p_index</code> in the main program and <code>p_index</code> inside a function are different variables. But from a readability perspective, I&rsquo;d suggest to rename it inside the function. It&rsquo;s better to avoid using same variable names inside functions and in the main program. Unless, of course, they are as simple as <code>a</code>, <code>i</code>, <code>x</code>, which are usually temporary variables. So, rename it inside the function to something short but meaningful.&rdquo;</p>
+<p>&ldquo;It will be <code>p_int</code>,&rdquo; said Erik. Then he thought for a while and said, &ldquo;But it starts with <code>p</code> because I copied it from the products menu. In the function it doesn&rsquo;t make sense anymore. I&rsquo;ll rename <code>p</code> to <code>choice</code> and <code>p_index</code> to <code>choice_int</code> because we convert it to integer.&rdquo;</p>
+<p>&ldquo;Great idea!&rdquo; I said.</p>
+<p>He worked a bit more and discovered, &ldquo;Now I don&rsquo;t have to subtract 1 from the indexes in my final <code>print</code>, because I have already done it in the function!&rdquo;</p>
+<p>He finally came up with this:</p>
+<div class="codehilite"><pre><span></span><span class="ch">#!/usr/bin/python3</span>
+
+<span class="n">products</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;chocolate&quot;</span><span class="p">,</span> <span class="s2">&quot;coffee&quot;</span><span class="p">]</span>
+<span class="n">flavors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;caramel&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;butterscotch&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;strawberry&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;raspberry&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;blueberry&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;sweetstrawberry&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;marshmallow&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;plain&quot;</span><span class="p">]</span>
+<span class="n">toppings</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;chocolate&quot;</span><span class="p">,</span> <span class="s2">&quot;sweetstrawberry&quot;</span><span class="p">,</span> <span class="s2">&quot;caramel&quot;</span><span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">menu</span><span class="p">(</span><span class="n">options</span><span class="p">):</span>
+    <span class="n">good_input</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="k">while</span> <span class="n">good_input</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">option</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">options</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">option</span><span class="p">)</span>
+        <span class="n">choice</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">choice_int</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">choice</span><span class="p">)</span>
+        <span class="k">except</span>  <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Error: you should enter a NUMBER!&quot;</span><span class="p">)</span>
+            <span class="k">continue</span>
+
+        <span class="k">if</span> <span class="n">choice_int</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">options</span><span class="p">)</span> <span class="ow">and</span> <span class="n">choice_int</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">:</span>
+            <span class="n">good_input</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;You should enter a number between 1 and &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">options</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">choice_int</span><span class="o">-</span><span class="mi">1</span>
+
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Choose your base product from the menu (press the number):&quot;</span><span class="p">)</span>
+<span class="n">p_index</span> <span class="o">=</span> <span class="n">menu</span><span class="p">(</span><span class="n">products</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Choose your flavor from the menu (press the number):&quot;</span><span class="p">)</span>
+<span class="n">f_index</span> <span class="o">=</span> <span class="n">menu</span><span class="p">(</span><span class="n">flavors</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Choose your topping from the menu (press the number):&quot;</span><span class="p">)</span>
+<span class="n">t_index</span> <span class="o">=</span> <span class="n">menu</span><span class="p">(</span><span class="n">toppings</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Here is your order: base product: &quot;</span><span class="p">,</span> <span class="n">products</span><span class="p">[</span><span class="n">p_index</span><span class="p">],</span> 
+  <span class="s2">&quot;, flavor: &quot;</span><span class="p">,</span> <span class="n">flavors</span><span class="p">[</span><span class="n">f_index</span><span class="p">],</span> <span class="s2">&quot;, topping: &quot;</span><span class="p">,</span> <span class="n">toppings</span><span class="p">[</span><span class="n">t_index</span><span class="p">])</span>
+</pre></div>
+
+<p>He tested it and it worked perfectly! He even tried to enter &ldquo;wrong&rdquo; choices and always received error messages until his choice was &ldquo;right&rdquo;.</p>
+<p>&ldquo;Congratulations!&rdquo; I said. &ldquo;We&rsquo;ve covered a lot of stuff during these days and you are moving very quickly. This is great!&rdquo;</p>
+<p>Erik was happy. He was so happy that he even suggested: &ldquo;I want to add something to the program. Like we did in that online course, I want to ask the customer for his name and then print it out together with his order!&rdquo;</p>
+<p>&ldquo;Good idea!&rdquo; I said. After a while his program printed out: <code>Hello, Erik! Here is your order ...</code></p>
+<p>&ldquo;Much better now,&rdquo; I said. &ldquo;Now, let&rsquo;s plan our next steps.&rdquo;</p>
+<p>&ldquo;What next steps? I thought we are done with this menu. I like it!&rdquo;</p>
+<p>&ldquo;Yes, but as far as I remember, you have prepared 6 cups of beverage for your friends last time. Which means you have to collect and <em>save</em> all their orders somehow, instead of just printing them out.&rdquo;</p>
+<p>&ldquo;Right&hellip; Yes, I understand now. I have to collect orders first and then print them out to know what I have to prepare.&rdquo;</p>
+<p>&ldquo;And to whom to deliver it,&rdquo; added I. &ldquo;Tomorrow let&rsquo;s try to use files: open, write, read. But this is for tomorrow. Go play outside now.&rdquo;</p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Python_vacation_day3/index.html" title="Day 3 - Errors" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Day 3 - Errors
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Pavel Anni
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application-6940329b9f.js"></script>
+      
+      
+      <script>app.initialize({url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

@@ -1,0 +1,628 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+        <meta name="author" content="Pavel Anni">
+      
+      
+        <link rel="shortcut icon" href="../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.8.1">
+    
+    
+      
+        <title>Day 3 - Errors - Python Vacation</title>
+      
+    
+    
+      <script src="../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application-bfecc7305d.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-02c2a4388f.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="green" data-md-color-accent="deep-orange">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="../index.html" title="Python Vacation" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+            
+            Day 3 - Errors
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    Python Vacation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../index.html" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Python_vacation_outline/index.html" title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Python_vacation_day0/index.html" title="Day 0 - Hello, World" class="md-nav__link">
+      Day 0 - Hello, World
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Python_vacation_day1/index.html" title="Day 1 - Text Dialogues" class="md-nav__link">
+      Day 1 - Text Dialogues
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Python_vacation_day2/index.html" title="Day 2 - Menus" class="md-nav__link">
+      Day 2 - Menus
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Day 3 - Errors
+      </label>
+    
+    <a href="index.html" title="Day 3 - Errors" class="md-nav__link md-nav__link--active">
+      Day 3 - Errors
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#errors-and-what-to-do-about-them" title="Errors and what to do about them" class="md-nav__link">
+    Errors and what to do about them
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Python_vacation_day4/index.html" title="Day 4 - Functions" class="md-nav__link">
+      Day 4 - Functions
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#errors-and-what-to-do-about-them" title="Errors and what to do about them" class="md-nav__link">
+    Errors and what to do about them
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="python-vacation-day-3">Python Vacation &ndash; Day 3</h1>
+<h2 id="errors-and-what-to-do-about-them">Errors and what to do about them</h2>
+<p>Next day Erik was in better mood. It seemed he forgot how I tortured his beautiful program. But we were going to talk about errors and exceptions so I had to remind him about yesterday.</p>
+<p>&ldquo;Remember what we did last time?&rdquo;</p>
+<p>&ldquo;Yes, you did some stupid things with my program. I didn&rsquo;t know that you are so ignorant and have no idea about how to use computers. If the menu says: Choose between 1 and 2, you should press 1 or 2, and not that garbage you typed last time.&rdquo;</p>
+<p>&ldquo;Well, a lot of developers think this way. But life has more variety than a choice between 1 and 2. I told you already that you should expect a stupid user, who doesn&rsquo;t read menus, a hacker who wants to break in, a kid who is just playing with the keyboard. It&rsquo;s all your responsibility to react to bad input and make sure your program doesn&rsquo;t break.&rdquo;</p>
+<p>&ldquo;Okay, okay&hellip; You said something about &lsquo;exceptions&rsquo; last time. What is it?&rdquo;</p>
+<p>&ldquo;There are a lot of situations when a Python program could break. Wrong input, division by zero, wrong list index&ndash;if your list has 5 elements and you are trying to access its 10<sup>th</sup> element. If you don&rsquo;t do anything about these cases, your Python program just breaks and stops. Sometimes it&rsquo;s okay, if something really bad is happening. But most of the times you shouldn&rsquo;t stop your program and just inform the user that an error happened and she should repeat her input. For example, if instead of a number she enters letters, we should tell her that it&rsquo;s not what we expect and return back to the input prompt. By the way, you haven&rsquo;t created an input prompt so far. I think you should add something like &lsquo;Please, choose from this list of base products or flavors&rsquo;. &rdquo; </p>
+<p>&ldquo;That&rsquo;s easy,&rdquo; said Erik. &ldquo;I can do that right now. But I will need your help with those &lsquo;excephtions&rsquo;. And also, how do we return back to the input?&rdquo;</p>
+<p>&ldquo;What do we use in Python, when we have to repeat something?&rdquo; asked I.</p>
+<p>&ldquo;A loop?&rdquo; guessed Erik.</p>
+<p>&ldquo;That&rsquo;s right! But which loop? In this case we have to repeat our input prompt until the user enters the <em>right</em> thing. Or, in other words, while he continues entering the <em>wrong</em> thing. You see where I am going?&rdquo;</p>
+<p>&ldquo;Of course! It should be a <code>while</code> loop!&rdquo; said Erik.</p>
+<p>I decided to help him a little bit. &ldquo;I suggest using a variable like <code>good_input</code> and set it to False initially. Then it will be a condition of the loop: if the input is not good yet, conitnue. If the input is good, i.e. is integer and in the right range, then exit from the loop. Let&rsquo;s put aside the exceptions part for now and work on the number ranges. You know what to check, right?&rdquo;</p>
+<p>&ldquo;Yes, let me try it,&rdquo; said Erik and started coding.</p>
+<p>Here is what he&rsquo;s got:</p>
+<div class="codehilite"><pre><span></span><span class="n">good_input</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="k">while</span> <span class="n">good_input</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Choose your base product from the menu (press the number):&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">product</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">products</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">product</span><span class="p">)</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+    <span class="n">p_index</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">p_index</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">products</span><span class="p">):</span>
+        <span class="n">good_input</span> <span class="o">=</span> <span class="bp">True</span>
+</pre></div>
+
+<p>&ldquo;Now try it,&rdquo; said I.</p>
+<div class="codehilite"><pre><span></span><span class="gp">erik@idea:~$</span> ./coffeeshop.py
+<span class="go">Choose your base product from the menu (press the number):</span>
+<span class="go">1 chocolate</span>
+<span class="go">2 coffee</span>
+<span class="go">99</span>
+<span class="go">Choose your base product from the menu (press the number):</span>
+<span class="go">1 chocolate</span>
+<span class="go">2 coffee</span>
+<span class="go">2</span>
+<span class="go">Choose your base product from the menu (press the number):</span>
+<span class="go">1 chocolate</span>
+<span class="go">2 coffee</span>
+</pre></div>
+
+<p>&ldquo;Hmmm&hellip; It doesn&rsquo;t let me enter 2&hellip; A-ha, I see! It should be less or <em>equal</em> the length of the array!&rdquo; </p>
+<p>He changed <code>&lt;</code> to <code>&lt;=</code> and it worked now. </p>
+<p>&ldquo;Try minus 3&hellip;&rdquo;, I whispered, trying to sound like a voice from the left shoulder.</p>
+<p>He entered <code>-3</code> and the program was okay with that. &ldquo;I know, I know,&rdquo; he said and added <code>and p_index &gt; 0</code> to that <code>if</code> statement. Now it worked fine both for big numbers and negative ones.</p>
+<p>I suggested: &ldquo;It might be a good idea to let people know what&rsquo;s wrong with their input. Like &lsquo;You number should be between this and that&rsquo;. You can use <code>else</code> in your <code>if</code> statement.&rdquo;</p>
+<p>&ldquo;Good idea!&rdquo; rejoiced Erik and made his <code>if</code> statement look like this:</p>
+<div class="codehilite"><pre><span></span>    <span class="k">if</span> <span class="n">p_index</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">products</span><span class="p">)</span> <span class="ow">and</span> <span class="n">p_index</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">:</span>
+        <span class="n">good_input</span> <span class="o">=</span> <span class="bp">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;You should enter a number between 1 and &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">products</span><span class="p">))</span>
+</pre></div>
+
+<p>&ldquo;Great!&rdquo; said I. &ldquo;Now you can copy this code to other menus. If you have several similar pieces of code, it&rsquo;s a good practice to make one of them work like you want it to work and then copy it to the other pieces. Even better is to use functions for that, but let&rsquo;s leave it for the other day.&rdquo;</p>
+<p>&ldquo;Can I use the same <code>good_input</code> variable for other loops?&rdquo; he asked. </p>
+<p>&ldquo;Yes, go ahead. It&rsquo;s a disposable variable, reuse it as you like. No need to create a new one for each loop.&rdquo;</p>
+<p>Erik has copied the loop code to the other two menus. Now his program looked like this:</p>
+<div class="codehilite"><pre><span></span><span class="ch">#!/usr/bin/python3</span>
+
+<span class="n">products</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;chocolate&quot;</span><span class="p">,</span> <span class="s2">&quot;coffee&quot;</span><span class="p">]</span>
+<span class="n">flavors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;caramel&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;butterscotch&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;strawberry&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;raspberry&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;blueberry&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;sweetstrawberry&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;marshmallow&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;plain&quot;</span><span class="p">]</span>
+<span class="n">toppings</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;chocolate&quot;</span><span class="p">,</span> <span class="s2">&quot;sweetstrawberry&quot;</span><span class="p">,</span> <span class="s2">&quot;caramel&quot;</span><span class="p">]</span>
+
+
+<span class="n">good_input</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="k">while</span> <span class="n">good_input</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Choose your base product from the menu (press the number):&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">product</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">products</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">product</span><span class="p">)</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+    <span class="n">p_index</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">p_index</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">products</span><span class="p">)</span> <span class="ow">and</span> <span class="n">p_index</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">:</span>
+        <span class="n">good_input</span> <span class="o">=</span> <span class="bp">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;You should enter a number between 1 and &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">products</span><span class="p">))</span>
+
+<span class="n">good_input</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="k">while</span> <span class="n">good_input</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Choose your flavor from the menu (press the number):&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">flavor</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">flavors</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">flavor</span><span class="p">)</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+    <span class="n">f_index</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">f_index</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">flavors</span><span class="p">)</span> <span class="ow">and</span> <span class="n">f_index</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">:</span>
+        <span class="n">good_input</span> <span class="o">=</span> <span class="bp">True</span>
+
+<span class="n">good_input</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="k">while</span> <span class="n">good_input</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Choose your topping from the menu (press the number):&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">topping</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">toppings</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">topping</span><span class="p">)</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+    <span class="n">t_index</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">t_index</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">toppings</span><span class="p">)</span> <span class="ow">and</span> <span class="n">t_index</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">:</span>
+        <span class="n">good_input</span> <span class="o">=</span> <span class="bp">True</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Here is your order: base product: &quot;</span><span class="p">,</span> <span class="n">products</span><span class="p">[</span><span class="n">p_index</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> 
+  <span class="s2">&quot;, flavor: &quot;</span><span class="p">,</span> <span class="n">flavors</span><span class="p">[</span><span class="n">f_index</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="s2">&quot;, topping: &quot;</span><span class="p">,</span> <span class="n">toppings</span><span class="p">[</span><span class="n">t_index</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+
+<p>&ldquo;Well, it works now. Time to talk about Exceptions. Try to run your program again and type some gibberish instead of numbers. Let&rsquo;s see what Python tells us about our input.&rdquo;</p>
+<p>Of course, Erik didn&rsquo;t want to see those nasty error messages again, but now he understood the importance of input checking. Or least it seemed so. So he ran the program and typed some letters:</p>
+<div class="codehilite"><pre><span></span><span class="gp">erik@idea:~$</span> ./coffeeshop.py
+<span class="go">1 chocolate</span>
+<span class="go">2 coffee</span>
+<span class="go">ghkflkjhdg</span>
+<span class="go">Traceback (most recent call last):</span>
+<span class="go">  File &quot;./coffeeshop-day3.py&quot;, line 21, in &lt;module&gt;</span>
+<span class="go">    p_index = int(p)</span>
+<span class="go">ValueError: invalid literal for int() with base 10: &#39;ghkflkjhdg&#39;</span>
+</pre></div>
+
+<p>&ldquo;Look at this last message. You see: Python tells us that we have entered an invalid literal for integer number. Which means: anything besides letters from 0 to 9. Also it&rsquo;s interesting that Python tells us that they are invalid for &lsquo;base 10&rsquo;. Which means for decimal system. If we tried to convert it as a hexadecimal number, some letters wouldn&rsquo;t be complete gibberish. Like for example if you would enter <code>ffdfdffdfd</code> and tried to convert it as hexadecimal number (i.e. with base=16), it would be absolutely fine. But I digressed.</p>
+<p>&ldquo;<code>ValueError</code> is the word which tells us that there is an exception and we should handle it somehow. There are other errors: <code>SyntaxError</code>, <code>ZeroDivisionError</code>, <code>TypeError</code>&hellip; You can find some examples in the Python official tutorial here: (<a href="https://docs.python.org/3/tutorial/errors.html">https://docs.python.org/3/tutorial/errors.html</a>). Let&rsquo;s take an example from the tutorial, it does exactly what we want. Look:&rdquo;</p>
+<div class="codehilite"><pre><span></span><span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter a number: &quot;</span><span class="p">))</span>
+        <span class="k">break</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Oops!  That was no valid number.  Try again...&quot;</span><span class="p">)</span>
+</pre></div>
+
+<p>&ldquo;Let&rsquo;s do something very similar in your code. But first let&rsquo;s think about this: which input check should come first&ndash;checking if we can convert it to an integer or checking if it&rsquo;s in the right range?&rdquo;</p>
+<p>Erik thought for a second and said: &ldquo;I think checking for gibberish should come first.&rdquo;</p>
+<p>&ldquo;That&rsquo;s right!&rdquo; I said. &ldquo;So we ask for input and continue the loop until we see a valid string which we can convert to an integer. And only then, after we converted it, we check if it&rsquo;s in the right range. When changing your code, please keep track of the indents and remember about the flow.&rdquo;</p>
+<p>&ldquo;Yes, sure,&rdquo; said Erik and get to the editor.</p>
+<p>After struggling with the code for a minute he asked: &ldquo;What does this <code>break</code> mean?&rdquo;</p>
+<p>&ldquo;It&rsquo;s a way to exit the <code>while</code> loop. In this example they decided not to use a condition in the <code>while</code> statement and they just put <code>True</code> in it. That means the loop will go forever unless we exit from it using this <code>break</code> keyword. And, as you can see, in the example they exit the loop if the input can be converted to a number. If this is not the case (somebody has entered letters), then they raise an exception and continue the loop. In our case even if we see that the input has only numbers, it&rsquo;s too early to exit the loop. We should go ahead and check if the number is in the range, right?&rdquo;</p>
+<p>&ldquo;So what should we put instead of <code>break</code> here?&rdquo;</p>
+<p>&ldquo;Nothing. We should just continue with the flow. If our <code>try</code> was successful, we don&rsquo;t go into <code>except</code> and continue with the statement which goes after <code>except</code>&mdash;but at the same indentation level.&rdquo;</p>
+<p>&ldquo;And if our <code>try</code> wasn&rsquo;t successful we tell the user that he should enter a number, not stupid letters, right?&rdquo;</p>
+<p>&ldquo;Yes, but not only that. After you told the user about his mistake, you should go back to the beginning of the loop. In Python we use the word <code>continue</code> for that. And then we start all over again: check the condition and decide if you continue or not. In our case we haven&rsquo;t change the condition, <code>good_input</code> is still <code>False</code> so we&rsquo;ll continue with the prompt asking to choose the base product.&rdquo;</p>
+<p>&ldquo;Should I put <code>continue</code> after my error message?&rdquo;</p>
+<p>&ldquo;Exactly right! Try it on your first dialogue and if it works, copy to the other menus.&rdquo;</p>
+<p>Here is what Erik has got in the first dialogue:</p>
+<div class="codehilite"><pre><span></span><span class="n">good_input</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="k">while</span> <span class="n">good_input</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Choose your base product from the menu (press the number):&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">product</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">products</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">product</span><span class="p">)</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">p_index</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+    <span class="k">except</span>  <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Error: you should enter a NUMBER!&quot;</span><span class="p">)</span>
+        <span class="k">continue</span>
+
+    <span class="k">if</span> <span class="n">p_index</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">products</span><span class="p">)</span> <span class="ow">and</span> <span class="n">p_index</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">:</span>
+        <span class="n">good_input</span> <span class="o">=</span> <span class="bp">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;You should enter a number between 1 and &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">products</span><span class="p">))</span>
+</pre></div>
+
+<p>He ran the script and tried to enter all kinds of garbage&mdash;the program always responded: &ldquo;You should enter a NUMBER!&rdquo;. Erik was happy&mdash;as if he just has defended his application from a violent hacker&rsquo;s attack!</p>
+<p>&ldquo;Now go ahead and copy this code in the other menus,&rdquo; said I.</p>
+<p>Erik worked for a while, testing the script from time to time, muttering and cursing along the way. As the old saying goes: &ldquo;What is the most popular programming language? Profanity.&rdquo; As a good parent I probably should&rsquo;ve told him not to use some words, but I had a different task right now. </p>
+<p>&ldquo;It works now!&rdquo; he said finally. </p>
+<p>&ldquo;What were you cursing about?&rdquo; I asked.</p>
+<p>&ldquo;Oh, you know, we have different variables in all three menus so I had to change all of them and keep track of all those <code>p_index</code>, &lsquo;<code>f_index</code>, <code>t_index</code>&hellip; But it works now! Look at my script now,&rdquo; and he proudly presented the fruit of his labor.</p>
+<div class="codehilite"><pre><span></span><span class="ch">#!/usr/bin/python3</span>
+
+<span class="n">products</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;chocolate&quot;</span><span class="p">,</span> <span class="s2">&quot;coffee&quot;</span><span class="p">]</span>
+<span class="n">flavors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;caramel&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;butterscotch&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;strawberry&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;raspberry&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;blueberry&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;sweetstrawberry&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;marshmallow&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;plain&quot;</span><span class="p">]</span>
+<span class="n">toppings</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;chocolate&quot;</span><span class="p">,</span> <span class="s2">&quot;sweetstrawberry&quot;</span><span class="p">,</span> <span class="s2">&quot;caramel&quot;</span><span class="p">]</span>
+
+
+<span class="n">good_input</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="k">while</span> <span class="n">good_input</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Choose your base product from the menu (press the number):&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">product</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">products</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">product</span><span class="p">)</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">p_index</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+    <span class="k">except</span>  <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Error: you should enter a NUMBER!&quot;</span><span class="p">)</span>
+        <span class="k">continue</span>
+
+    <span class="k">if</span> <span class="n">p_index</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">products</span><span class="p">)</span> <span class="ow">and</span> <span class="n">p_index</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">:</span>
+        <span class="n">good_input</span> <span class="o">=</span> <span class="bp">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;You should enter a number between 1 and &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">products</span><span class="p">))</span>
+
+<span class="n">good_input</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="k">while</span> <span class="n">good_input</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Choose your flavor from the menu (press the number):&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">flavor</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">flavors</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">flavor</span><span class="p">)</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">f_index</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="k">except</span>  <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Error: you should enter a NUMBER!&quot;</span><span class="p">)</span>
+        <span class="k">continue</span>
+
+    <span class="k">if</span> <span class="n">f_index</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">flavors</span><span class="p">)</span> <span class="ow">and</span> <span class="n">f_index</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">:</span>
+        <span class="n">good_input</span> <span class="o">=</span> <span class="bp">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;You should enter a number between 1 and &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">flavors</span><span class="p">))</span>
+
+
+<span class="n">good_input</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="k">while</span> <span class="n">good_input</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Choose your topping from the menu (press the number):&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">topping</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">toppings</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">topping</span><span class="p">)</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">t_index</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="k">except</span>  <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Error: you should enter a NUMBER!&quot;</span><span class="p">)</span>
+        <span class="k">continue</span>
+
+    <span class="k">if</span> <span class="n">t_index</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">toppings</span><span class="p">)</span> <span class="ow">and</span> <span class="n">t_index</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">:</span>
+        <span class="n">good_input</span> <span class="o">=</span> <span class="bp">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;You should enter a number between 1 and &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">toppings</span><span class="p">))</span>
+
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Here is your order: base product: &quot;</span><span class="p">,</span> <span class="n">products</span><span class="p">[</span><span class="n">p_index</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> 
+  <span class="s2">&quot;, flavor: &quot;</span><span class="p">,</span> <span class="n">flavors</span><span class="p">[</span><span class="n">f_index</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="s2">&quot;, topping: &quot;</span><span class="p">,</span> <span class="n">toppings</span><span class="p">[</span><span class="n">t_index</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+
+<p>&ldquo;You see&mdash;it&rsquo;s more than 70 lines of code that I wrote!&rdquo; Erik was very proud indeed.</p>
+<p>&ldquo;Great! Are you tired now?&rdquo;</p>
+<p>&ldquo;Yes, I am! And hungry!&rdquo;</p>
+<p>&ldquo;We can ask Mom to fix some lunch for us. We have definitely earned it. As for your tiredness, I think we can do something about it too. You see, you&rsquo;ve spend some time copying and pasting pieces of code from one menu to another. You have to change it a bit, but only a bit: one variable here, one variable there. There is more efficient way to do this. I am talking about functions. Every time you notice you are repeating yourself, think about functions. Think: is it possible to simplify it and avoid repetition? There is even an acronim for that: DRY, Don&rsquo;t Repeat Yourself.</p>
+<p>&ldquo;And,&rdquo; I continued, &ldquo;the number of lines of code is not always a sign of good work. Your code should be easy to read, easy to understand. Long programs are not always best programs. By the way, short programs are not alwyas the best either. Think about somebody who should read, understand and maintain your program. Here is a great quote from Wes Dyer: &lsquo;Make it correct, make it clear, make it concise, make it fast. In that order.&rsquo;</p>
+<p>&ldquo;Tomorrow let&rsquo;s try to make your code more readable. Let&rsquo;s use functions for that. Don&rsquo;t worry&mdash;it&rsquo;s easy.&rdquo;</p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Python_vacation_day2/index.html" title="Day 2 - Menus" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Day 2 - Menus
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Python_vacation_day4/index.html" title="Day 4 - Functions" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Day 4 - Functions
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Pavel Anni
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application-6940329b9f.js"></script>
+      
+      
+      <script>app.initialize({url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
