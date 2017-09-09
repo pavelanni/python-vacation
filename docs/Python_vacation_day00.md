@@ -1,6 +1,8 @@
 
 # Python Vacation -- Day 0
 
+## Coffee for friends
+
 It all started on 4th of July. My 13-year old son came home with an idea. 
 
 "I want to treat my neighborhood friends with Frappuccino to celebrate Independence Day!" said Erik.

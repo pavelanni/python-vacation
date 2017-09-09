@@ -26,5 +26,5 @@ for i, topping in enumerate(toppings, start=1):
 t = input()
 t_index = int(t)
 
-print("Here is your order: base product: ", products[p_index-1], 
-  ", flavor: ", flavors[f_index-1], ", topping: ", toppings[t_index-1])
+print("Here is your order: base product: ", products[p_index-1],
+      ", flavor: ", flavors[f_index-1], ", topping: ", toppings[t_index-1])

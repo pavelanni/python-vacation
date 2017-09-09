@@ -152,4 +152,4 @@ Erik was happy. He was so happy that he even suggested: "I want to add something
 
 "Right... Yes, I understand now. I have to collect orders first and then print them out to know what I have to prepare."
 
-"And to whom to deliver it," added I. "Tomorrow let's try to use files: open, write, read. But this is for tomorrow. Go play outside now."
+"And to whom to deliver it," added I. "Tomorrow let's try to use files: open, write, read. This is for tomorrow. Eventually we'll do it with a database. And then with web interface online. For now, go play outside with your friends."

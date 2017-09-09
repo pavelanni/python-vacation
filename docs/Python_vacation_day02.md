@@ -71,7 +71,7 @@ erik@idea:~$ ./coffeeshop.py
 1
 ```
 
-"This is good, but in reality you wanted to print out something like 'Here is your order: base product: coffee, flavor: marshmallow, topping: chocolate', right? How would you get products and flavors from the numbers?"
+"This is good, but in reality, you wanted to print out something like 'Here is your order: base product: coffee, flavor: marshmallow, topping: chocolate', right? How would you get products and flavors from the numbers?"
 
 "Yes, you told me yesterday! We'll use them as list indexes!"
 
@@ -120,15 +120,15 @@ TypeError: list indices must be integers or slices, not str
 
 "What's this?" he looked puzzled.
 
-"This is your first error message! Congatulations!"
+"This is your first error message! Congratulations!"
 
 "Why are you so glad??? What's so good about error messages?" Erik was clearly offended. Of course, he was sure that his dad is making fun of him.
 
-"Erik, don't get me wrong. Believe me, I want your application to work as much as you do. That's why I'm glad to see an error message--at least it give us some information. It's much worse when your program just doesn't work and says nothing. Also, you have heard this from me many times already: making mistakes is the best way to learn. Don't worry, we'll fix it."
+"Erik, don't get me wrong. Believe me, I want your application to work as much as you do. That's why I'm glad to see an error message--at least it gives us some information. It's much worse when your program just doesn't work and says nothing. Also, you have heard this from me many times already: making mistakes is the best way to learn. Don't worry, we'll fix it."
 
 "But what should we do?"
 
-"You see, in this case Python is pretty clear about what's wrong. It says that list indices must be integers, not strings. Remember, before we started working with menus, when you asked your users about their preferences what did you get?"
+"You see, in this case, Python is pretty clear about what's wrong. It says that list indices must be integers, not strings. Remember, before we started working with menus, when you asked your users about their preferences what did you get?"
 
 "They could answer 'coffee' or 'strawberry'."
 
@@ -136,7 +136,7 @@ TypeError: list indices must be integers or slices, not str
 
 "Strings?"
 
-"Right, they are strings! And now when your users input '1' or '3', or '7' - they also input _strings_ which consist of numbers. They are not numbers, they are strings consisting of _letters_ '1', '3', '7'. Luckily, in Python we can easily convert them to numbers with function `int()`. You have to do this: take 'p' or 'f' or 't'--the answer you received from the user--and convert it to integer using `int()`. You can do it right after the `input()` call and assign it to something like `p_index`. In Python you can even assign it to the same variable--what used to be a string, becomes integer. But for now let's have separate variables: our program will be more readable this way."
+"Right, they are strings! And now when your users input '1' or '3', or '7' - they also input _strings_ which consist of numbers. They are not numbers, they are strings consisting of _letters_ '1', '3', '7'. Luckily, in Python, we can easily convert them to numbers with function `int()`. You have to do this: take 'p' or 'f' or 't'--the answer you received from the user--and convert it to an integer using `int()`. You can do it right after the `input()` call and assign it to something like `p_index`. In Python you can even assign it to the same variable--what used to be a string, becomes an integer. But for now let's have separate variables: our program will be more readable this way."
 
 "Like this?"
 
@@ -192,7 +192,7 @@ print("Here is your order: base product: ", products[p_index],
 Here is your order: base product:  coffee , flavor:  sweetstrawberry , topping:  sweetstrawberry
 ```
 
-"Wait! It got it all wrong! I asked for chocolate with blueberry and it gave me coffee with sweetstraberry!"
+"Wait! It got it all wrong! I asked for chocolate with blueberry and it gave me coffee with sweetstrawberry!"
 
 "First of all, let me ask you: 'Who is that 'it' you are talking about?'"
 
@@ -268,11 +268,11 @@ IndexError: list index out of range
 
 "AGAIN??? You broke it again!"
 
-"You see, Python clearly tells you that the index I've entered is out of range. Which means we have to check the input not only for being a number, but also for being a 'good' number, i.e. being in the range of our lists' indexes. And, as far as you can see, for different lists this range is different."
+"You see, Python clearly tells you that the index I've entered is out of range. Which means we have to check the input not only for being a number but also for being a 'good' number, i.e. being in the range of our lists' indexes. And, as far as you can see, for different lists this range is different."
 
 "Okay, okay, I'll do that. But it's so-o boring to check everything!.."
 
-"I completely agree with you. It's probably the most boring part of programming. But at the same time it's one of the most important parts, if we want to write safe programs and be protected from hacker attacks. Believe it or not, a lot of hacker attacks happen just because programmers didn't check the input.
+"I completely agree with you. It's probably the most boring part of programming. But at the same time, it's one of the most important parts, if we want to write safe programs and be protected from hacker attacks. Believe it or not, a lot of hacker attacks happen just because programmers didn't check the input.
 
 "Let's leave it for tomorrow. We'll have to do two things: check if the input is an integer number and check if it's in the range of list indexes," with this I felt much better: now we had a plan for tomorrow.
 
