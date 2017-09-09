@@ -159,14 +159,14 @@ In [18]:
 "That's right! This is exactly what you need to prepare the beverage. Just make sure you separate them with commas, like you just did in the IPython session. There is a well-known format called 'Comma Separated Values', or 'CSV' and we will follow its rules. You can use one of the string methods called `join()`. Let me show you. Imagine you have several strings and you want to make a single string where they were separated by comma." I took his keyboard and wrote in the IPython session:
 
 ```
-In [26]: a = "first"
+In [19]: a = "first"
 
-In [27]: b = "second"
+In [20]: b = "second"
 
-In [28]: c = "third"
+In [21]: c = "third"
 
-In [29]: ",".join((a,b,c))
-Out[29]: 'first,second,third'
+In [22]: ",".join((a,b,c))
+Out[22]: 'first,second,third'
 ```
 
 "You see," I said, "the object here is the symbol which goes between the elements, and the argument of the method is the collection of the strings we want to join together."
@@ -178,8 +178,8 @@ Out[29]: 'first,second,third'
 Erik typed:
 
 ```
-In [30]: ",".join([a,b,c])
-Out[30]: 'first,second,third'
+In [23]: ",".join([a,b,c])
+Out[23]: 'first,second,third'
 ```
 
 And get the expected result. I continued, "You see, the result of this function is a string which we can use in the `write()` function. Now you have everything you need to write your orders to the file. Oh, don't forget to add "`\n`" to the end of the string. Just use the plus sign in the `write()` argument."
@@ -224,8 +224,8 @@ It worked indeed! It added orders to the file---great! But that was only a half 
 
 Erik looked over his history and typed:
 
-```console
-In [33]: f = open("orders.txt", "r")
+```
+In [24]: f = open("orders.txt", "r")
 ```
 
 "Good," I said. "Now we have this _object_ `f` again. And this object has some methods. We just used its `write()` method to write our data to the file. Which method should we use to read the data?"
@@ -237,8 +237,8 @@ In [33]: f = open("orders.txt", "r")
 Erik typed:
 
 ```
-In [59]: f.read()
-Out[59]: 'Erik,chocolate,butterscotch,caramel\nPavel,coffee,plain,chocolate\n'
+In [25]: f.read()
+Out[25]: 'Erik,chocolate,butterscotch,caramel\nPavel,coffee,plain,chocolate\n'
 ``` 
 
 I said: "You see, it was easy. Python read the whole file and printed it out as a string. Now we have to decide what to do with this data."
@@ -266,20 +266,20 @@ Erik did. "Nothing," he said. "It showed nothing this time. Where is my file?"
 Erik typed:
 
 ```
-In [61]: f.seek(0)
-Out[61]: 0
+In [26]: f.seek(0)
+Out[26]: 0
 
-In [62]: f.read()
-Out[62]: 'Erik,chocolate,butterscotch,caramel\nPavel,coffee,plain,chocolate\n'
+In [27]: f.read()
+Out[27]: 'Erik,chocolate,butterscotch,caramel\nPavel,coffee,plain,chocolate\n'
 ```
 
 "Very good. Now let's read it order by order, meaning line by line. Luckily, Python has a simple method for this. As soon as we are going to repeat some action a number of times, we are going to use---you guessed it right---a `for` loop! Let me show you." 
 
 ```
-In [64]: f.seek(0)
-Out[64]: 0
+In [28]: f.seek(0)
+Out[28]: 0
 
-In [65]: for line in f:
+In [29]: for line in f:
     ...:     print(line)
     ...:     
 Erik,chocolate,butterscotch,caramel
@@ -291,7 +291,7 @@ Pavel,coffee,plain,chocolate
 "You see, here we're looping through the file and doing something with each line of the file. We don't want just to print them, we want to split them into products, flavors, toppings. So, naturally, we'll use the method `split()` for that. Look how it works:"
 
 ```
-In [67]: for line in f:
+In [30]: for line in f:
     ...:     name,product,flavor,topping = line.split(',')
     ...:     print(name)
     ...:     print(product)
@@ -320,8 +320,8 @@ I explained, "We use the method `split()` for each line here. And we tell it tha
 Erik did it:
 
 ```
-In [68]: topping
-Out[68]: 'chocolate\n'
+In [31]: topping
+Out[31]: 'chocolate\n'
 ```
 
 I pointed to the output and said, "You see this '`\n`' character at the end? It's a newline symbol and we don't need it. We should strip it from the line after we took it from the file. And, believe it or not, there is a special method to strip characters from strings. And it's called..."
@@ -333,10 +333,10 @@ I pointed to the output and said, "You see this '`\n`' character at the end? It'
 Now Erik was ready to reuse the code written my me. He didn't forget to move the position to the beginning and he also added something from himself.
 
 ```
-In [73]: f.seek(0)
-Out[73]: 0
+In [32]: f.seek(0)
+Out[32]: 0
 
-In [74]: for line in f:
+In [33]: for line in f:
     ...:     name,product,flavor,topping = line.strip('\n').split(',')
     ...:     print("Dear ", name, "here is your order:")
     ...:     print("Base product: ", product)
