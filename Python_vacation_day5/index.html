@@ -1,0 +1,618 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+        <meta name="author" content="Pavel Anni">
+      
+      
+        <link rel="shortcut icon" href="../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.8.1">
+    
+    
+      
+        <title>Day 5 - Files - Python Vacation</title>
+      
+    
+    
+      <script src="../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application-bfecc7305d.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-02c2a4388f.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="green" data-md-color-accent="deep-orange">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="../index.html" title="Python Vacation" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+            
+            Day 5 - Files
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    Python Vacation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../index.html" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Python_vacation_day0/index.html" title="Day 0 - Coffee for Friends" class="md-nav__link">
+      Day 0 - Coffee for Friends
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Python_vacation_day1/index.html" title="Day 1 - Text Dialogues" class="md-nav__link">
+      Day 1 - Text Dialogues
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Python_vacation_day2/index.html" title="Day 2 - Menus" class="md-nav__link">
+      Day 2 - Menus
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Python_vacation_day3/index.html" title="Day 3 - Errors" class="md-nav__link">
+      Day 3 - Errors
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Python_vacation_day4/index.html" title="Day 4 - Functions" class="md-nav__link">
+      Day 4 - Functions
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Day 5 - Files
+      </label>
+    
+    <a href="index.html" title="Day 5 - Files" class="md-nav__link md-nav__link--active">
+      Day 5 - Files
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-files" title="Working with files" class="md-nav__link">
+    Working with files
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-files" title="Working with files" class="md-nav__link">
+    Working with files
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="python-vacation-day-5">Python Vacation &ndash; Day 5</h1>
+<h2 id="working-with-files">Working with files</h2>
+<p>Next day Erik was ready for new Python adventures. He looked more serious&mdash;his application was going to become really business critical for him. Customers, orders, delivery, database, online shop&mdash;all that sounded very serious now. </p>
+<p>&ldquo;So, you said we are going to work with files today?&rdquo;. He was eager to start.</p>
+<p>&ldquo;Yes, we have to store your orders somewhere, right? What do we do with files in Python? Do you remember from your course?&rdquo;</p>
+<p>&ldquo;We can open them, we can read and write. We have to close them when we don&rsquo;t need them anymore.&rdquo;</p>
+<p>&ldquo;That&rsquo;s right. And also we can open files in different <em>modes</em>. We can tell Python and the operating system that we want only read from the file and it will guarantee that we don&rsquo;t write to it accidentaly. Might be very helpful. Well, we start working with files. Let&rsquo;s make a plan. What do we need this file for?&rdquo;</p>
+<p>&ldquo;We want to save our orders and then list them.&rdquo;</p>
+<p>&ldquo;Okay, in Python words it means we want to write and read to and from the file. When do we want to write and when do we want to read?&rdquo;</p>
+<p>&ldquo;We will write to the file right after taking the order. And we read&hellip; wait, we don&rsquo;t have it here yet. We need another function to list the orders!&rdquo;</p>
+<p>&ldquo;That&rsquo;s right!&rdquo; I liked the way Erik started to think: in functions. We are on the right track! &ldquo;Yes, we&rsquo;ll need that function. And also, I think, we&rsquo;ll need a menu in the beginning of the script. Something like: if you want to enter a new order, press &lsquo;N&rsquo;, if you want to list orders, press &lsquo;L&rsquo;. But first let&rsquo;s write something to a file.&rdquo;</p>
+<p>Erik looked at his script and said, &ldquo;I think it should be here. Here, after we print &lsquo;Here is your order&rsquo;, we have to write it to the file, right?&rdquo;</p>
+<p>&ldquo;Yes,&rdquo; I said, &ldquo;good idea. But first we have to open the file. In our case we open it for writing. Or, rather, appending.&rdquo;</p>
+<p>&ldquo;What&rsquo;s the difference?&rdquo;</p>
+<p>&ldquo;Let me explain. When we work with files we read and write them byte by byte. We read one byte and move to the next one. So we always are located in some <em>position</em> in the file. Like 8<sup>th</sup> byte, or 247<sup>th</sup> byte, or 0<sup>th</sup> byte.&rdquo;</p>
+<p>&ldquo;It&rsquo;s at the beginning of the file, right?&rdquo;</p>
+<p>&ldquo;Yes, exactly. And when we are at the beginning of the file and we start writing, we replace everything that is already there. Sometimes it&rsquo;s what we want, but sometimes it&rsquo;s not. In our case we&rsquo;d like to add our orders to those that are already recorded, not erase and replace them. When we open a file for <em>writing</em>, we are in the 0<sup>th</sup> position, but when we open it for <em>appending</em>, we are at the position right after the last byte of the file. And everything we write will be added to the end of the file.&rdquo;</p>
+<p>I decided that it&rsquo;s time to use a new tool to illustrate this point.</p>
+<p>&ldquo;Let me show another way to work with Python, it&rsquo;s called IPython. It&rsquo;s similar to the standard Python console, but more convenient. Open a terminal window and type <code>ipython</code>.&rdquo;</p>
+<p>He did it.</p>
+<div class="codehilite"><pre><span></span><span class="gp">erik@idea:~$</span> ipython
+<span class="go">Python 3.6.1 |Anaconda custom (64-bit)| (default, May 11 2017, 13:09:58) </span>
+<span class="go">Type &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</span>
+
+<span class="go">IPython 5.3.0 -- An enhanced Interactive Python.</span>
+<span class="go">?         -&gt; Introduction and overview of IPython&#39;s features.</span>
+<span class="gp">%</span>quickref -&gt; Quick reference.
+<span class="go">help      -&gt; Python&#39;s own help system.</span>
+<span class="go">object?   -&gt; Details about &#39;object&#39;, use &#39;object??&#39; for extra details.</span>
+
+<span class="go">In [1]:</span>
+</pre></div>
+
+<p>&ldquo;Looks good with colors, I like it!&rdquo;</p>
+<p>&ldquo;We will play with files in this IPython environment. Instead of writing scripts, saving and running them, this tool is so much easier for simple tasks. Another good thing is that it has a lot of small helpful things, like command completion and others. We can even run Linux commands without leaving the session&mdash;and we will need it.&rdquo;</p>
+<p>I continued, &ldquo;We start with opening a file. Write <code>f = open(&quot;a.txt&quot;, &quot;w+&quot;)</code>. As you can easily guess, &ldquo;<code>a.txt</code>&rdquo; is a file name, &ldquo;<code>w</code>&rdquo; means we open it for writing, and that &ldquo;plus&rdquo; sign means: if the file doesn&rsquo;t exist, create it. Exactly what we need.&rdquo;</p>
+<p>&ldquo;What is &ldquo;<code>f</code>?&rdquo; asked Erik after he typed the string in the IPython session.</p>
+<p>&ldquo;It&rsquo;s a file <em>object</em>. You did have something about objects and classes in your course, didn&rsquo;t you?&rdquo;</p>
+<p>&ldquo;Yes, objects can have <em>methods</em> and they are like functions. We call them by adding a dot and a function name to the object.&rdquo;</p>
+<p>&ldquo;Great!&rdquo; I was glad Erik was getting up to speed and recalled more and more from his previous course. &ldquo;So, &ldquo;<code>f</code>&rdquo; is a file object and we will use its methods, like <code>read()</code> and <code>write()</code>. Let&rsquo;s write something to the file. Type <code>f.write('1,2,3')</code>.&rdquo;</p>
+<p>He typed:</p>
+<div class="codehilite"><pre><span></span>In [2]: f.write(&quot;1,2,3&quot;)
+Out[2]: 5
+</pre></div>
+
+<p>&ldquo;What do you think is <code>5</code> here?&rdquo; asked I.</p>
+<p>&ldquo;I have no idea&hellip;&rdquo;</p>
+<p>&ldquo;Remember, most functions return something. In this case this <code>write()</code> function returns the number of bytes written in the file. Three digits and two commas. Now let&rsquo;s check the file, if the function worked correctly. We&rsquo;ll use a simple Linux command <code>cat</code>, but inside IPython it should start with a percent sign. Type <code>%cat a.txt</code>.&rdquo;</p>
+<div class="codehilite"><pre><span></span>In [3]: %cat a.txt
+</pre></div>
+
+<p>&ldquo;Nothing,&rdquo; said Erik.</p>
+<p>&ldquo;Because we haven&rsquo;t closed the file. Usually operating system keeps data in a buffer in main memory before writing it to the file. It physically writes the data to the file when we close it (well, there are other situations and methods, but we&rsquo;ll talk about them later). Now close the file and print it out again with <code>cat</code>.&rdquo;</p>
+<div class="codehilite"><pre><span></span>In [4]: f.close()
+
+In [5]: %cat a.txt
+1,2,3
+</pre></div>
+
+<p>&ldquo;You see, now it&rsquo;s there,&rdquo; said I. &ldquo;Let&rsquo;s open it and write something else. You can use &lsquo;Up&rsquo; and &lsquo;Down&rsquo; arrows to access history, like in Linux shell.&rdquo;</p>
+<p>Erik repeated several previous commands:</p>
+<div class="codehilite"><pre><span></span>In [6]: f = open(&quot;a.txt&quot;, &quot;w+&quot;)
+
+In [7]: f.write(&quot;5,6,7&quot;)
+Out[7]: 5
+
+In [8]: f.close()
+
+In [9]: %cat a.txt
+5,6,7
+</pre></div>
+
+<p>&ldquo;You see now&mdash;this is what I meant. When you open a file for writing, you start from the beginning and replace everything that was there before. Now open it again, but with the &ldquo;<code>a</code>&rdquo; mode and try to write something again. Then close and look at the result.&rdquo;</p>
+<p>Now Erik didn&rsquo;t need any specific instructions. He went back in history, changed the file&rsquo;s mode and wrote a bunch of numbers to the file again.</p>
+<div class="codehilite"><pre><span></span>In [10]: f = open(&quot;a.txt&quot;, &quot;a+&quot;)
+
+In [11]: f.write(&quot;7,8,9&quot;)
+Out[11]: 5
+
+In [12]: f.close()
+
+In [13]: %cat a.txt
+5,6,77,8,9
+In [14]: 
+</pre></div>
+
+<p>&ldquo;Why didn&rsquo;t it write it from a new line?&rdquo; he asked.</p>
+<p>&ldquo;Because you didn&rsquo;t tell it to. You didn&rsquo;t tell Python to write a new line character for you, so it just pasted the numbers next to the existing ones.&rdquo;</p>
+<p>&ldquo;How would I put a new line in the file?&rdquo;</p>
+<p>&ldquo;Place this in the beginning of your string: &ldquo;<code>\n</code>&rdquo; and it will do the trick. It looks like two characters, but in reality it&rsquo;s one and it&rsquo;s a new line character. Go ahead.&rdquo;</p>
+<div class="codehilite"><pre><span></span>In [14]: f = open(&quot;a.txt&quot;, &quot;a+&quot;)
+
+In [15]: f.write(&quot;\n9,10,11&quot;)
+Out[15]: 8
+
+In [16]: f.close()
+
+In [17]: %cat a.txt
+5,6,77,8,9
+9,10,11
+In [18]: 
+</pre></div>
+
+<p>&ldquo;Yes, now I see a new line,&rdquo; said Erik.</p>
+<p>&ldquo;We will need it to work with your orders. Traditionally we place each record&mdash;in your case each order&mdash;in a separate line. Then we&rsquo;ll read that file line by line and print out your orders one by one.&rdquo;</p>
+<p>&ldquo;Okay, this is good. But what should I put into the orders? Name, then base product, then flavor and topping?&rdquo;</p>
+<p>&ldquo;That&rsquo;s right! This is exactly what you need to prepare the beverage. Just make sure you separate them with commas, like you just did in the IPython session. There is a well-known format called &lsquo;Comma Separated Values&rsquo;, or &lsquo;CSV&rsquo; and we will follow its rules. You can use one of the string methods called <code>join()</code>. Let me show you. Imagine you have several strings and you want to make a single string where they were separated by comma.&rdquo; I took his keyboard and wrote in the IPython session:</p>
+<div class="codehilite"><pre><span></span>In [26]: a = &quot;first&quot;
+
+In [27]: b = &quot;second&quot;
+
+In [28]: c = &quot;third&quot;
+
+In [29]: &quot;,&quot;.join((a,b,c))
+Out[29]: &#39;first,second,third&#39;
+</pre></div>
+
+<p>&ldquo;You see,&rdquo; I said, &ldquo;the object here is the symbol which goes between the elements, and the argument of the method is the collection of the strings we want to join together.&rdquo;</p>
+<p>&ldquo;Why did you put two sets of parenthesis?&rdquo;</p>
+<p>&ldquo;Because we have to pass a <em>single</em> argument to the <code>join()</code> method. So we have to combine the strings together into a single object. In this case I created a <em>tuple</em> (I&rsquo;m sure they mentioned it in your course) and one set of parenthesis for that. You can create a list and result will be the same. Try to replace the internal set of parenthesis with square brackets.&rdquo; </p>
+<p>Erik typed:</p>
+<div class="codehilite"><pre><span></span>In [30]: &quot;,&quot;.join([a,b,c])
+Out[30]: &#39;first,second,third&#39;
+</pre></div>
+
+<p>And get the expected result. I continued, &ldquo;You see, the result of this function is a string which we can use in the <code>write()</code> function. Now you have everything you need to write your orders to the file. Oh, don&rsquo;t forget to add &ldquo;<code>\n</code>&rdquo; to the end of the string. Just use the plus sign in the <code>write()</code> argument.&rdquo;</p>
+<p>Erik opened his editor and started writing the code. I noticed that he opened the file with &ldquo;<code>a+</code>&rdquo; mode and named the file &ldquo;<code>orders.txt</code>&rdquo;. He passed the joined string to <code>write()</code> and he didn&rsquo;t forget to close the file. It took him a couple of attempts to find the right place for that &ldquo;<code>\n</code>&rdquo; inside the parenthesis, but he did it right. Here is his code:</p>
+<div class="codehilite"><pre><span></span><span class="o">.</span> <span class="o">.</span> <span class="o">.</span> <span class="p">(</span><span class="n">skipped</span><span class="p">)</span> <span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hello &quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot;! Here is your order: base product: &quot;</span><span class="p">,</span> <span class="n">products</span><span class="p">[</span><span class="n">p_index</span><span class="p">],</span> 
+  <span class="s2">&quot;, flavor: &quot;</span><span class="p">,</span> <span class="n">flavors</span><span class="p">[</span><span class="n">f_index</span><span class="p">],</span> <span class="s2">&quot;, topping: &quot;</span><span class="p">,</span> <span class="n">toppings</span><span class="p">[</span><span class="n">t_index</span><span class="p">])</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;orders.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;a+&quot;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="n">name</span><span class="p">,</span> <span class="n">products</span><span class="p">[</span><span class="n">p_index</span><span class="p">],</span> <span class="n">flavors</span><span class="p">[</span><span class="n">f_index</span><span class="p">],</span> <span class="n">toppings</span><span class="p">[</span><span class="n">t_index</span><span class="p">]))</span><span class="o">+</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+<p>In the console he ran the script, entered his choices and then typed:</p>
+<div class="codehilite"><pre><span></span>erik@idea:~$ cat orders.txt 
+Erik,chocolate,butterscotch,caramel
+</pre></div>
+
+<p>It worked prefectly. I asked if I can try it too. Erik said, &ldquo;Yes&hellip; But, PLEASE!&hellip;&rdquo; meaning, of course, &ldquo;Don&rsquo;t ruin my program again!&rdquo;</p>
+<p>I entered my choices and output the file again.</p>
+<div class="codehilite"><pre><span></span>erik@idea:~$ cat orders.txt 
+Erik,chocolate,butterscotch,caramel
+Pavel,coffee,plain,chocolate
+</pre></div>
+
+<p>It worked indeed! It added orders to the file&mdash;great! But that was only a half of our task for today. </p>
+<p>&ldquo;You did a great job,&rdquo; I said. &ldquo;Now we have to learn how to read from that file. How should we start?&rdquo;</p>
+<p>&ldquo;With opening the file?&rdquo; Erik suggested.</p>
+<p>&ldquo;Of course. Remember, we talked about different <em>modes</em> when opening a file? This time we should open it for reading. Let&rsquo;s start with IPython again and try a couple things before writing the script. I think now you can easily guess how to open the file for reading.&rdquo;</p>
+<p>Erik looked over his history and typed:</p>
+<div class="codehilite"><pre><span></span><span class="go">In [33]: f = open(&quot;orders.txt&quot;, &quot;r&quot;)</span>
+</pre></div>
+
+<p>&ldquo;Good,&rdquo; I said. &ldquo;Now we have this <em>object</em> <code>f</code> again. And this object has some methods. We just used its <code>write()</code> method to write our data to the file. Which method should we use to read the data?&rdquo;</p>
+<p>&ldquo;The <code>read()</code> method?&rdquo; Erik guessed. The answer was too obvoius and Erik expected there was a catch.</p>
+<p>&ldquo;Of course! It&rsquo;s obvious! Try it.&rdquo;</p>
+<p>Erik typed:</p>
+<div class="codehilite"><pre><span></span>In [59]: f.read()
+Out[59]: &#39;Erik,chocolate,butterscotch,caramel\nPavel,coffee,plain,chocolate\n&#39;
+</pre></div>
+
+<p>I said: &ldquo;You see, it was easy. Python read the whole file and printed it out as a string. Now we have to decide what to do with this data.&rdquo;</p>
+<p>&ldquo;What do you mean? I thought we were going to print out all orders and here they are.&rdquo;</p>
+<p>&ldquo;Yes, but they don&rsquo;t look pretty. I suggest we split them into separate orders first and then figure out what is the base product, what is the flavor, etc. This way we will be able to print it in a nice way. Like: &lsquo;Dear Erik! Here is your order&hellip;&rsquo; and then all components line by line.&rdquo;</p>
+<p>&ldquo;Like in a receipt!&rdquo; Erik was glad it&rsquo;s going to look like &lsquo;real life&rsquo; thing. &ldquo;I like it, let&rsquo;s make a receipt!&rdquo;</p>
+<p>&ldquo;Let&rsquo;s make it!&rdquo; I agreed. &ldquo;But first we have to rewind the file.&rdquo;</p>
+<p>&ldquo;What do you mean&ndash;<code>rewind</code>?&rdquo; asked Erik. </p>
+<p>&ldquo;Well, many years ago files were stored on magnetic tapes. Like in a cassette player,&rdquo; I said and suddenly realized that Erik doesn&rsquo;t know what a cassette player is.... &ldquo;Okay, forget about &lsquo;rewind&rsquo;. Let me show you. Type the same command again.&rdquo;</p>
+<p>Erik did. &ldquo;Nothing,&rdquo; he said. &ldquo;It showed nothing this time. Where is my file?&rdquo;</p>
+<p>&ldquo;Don&rsquo;t worry, your file is safe. Remember I told you about the position where we read or write something in the file? In this case we have read the whole file byte by byte and reached its end. And there is nothing left to read, that&rsquo;s why you see nothing. We have to get back to the beginning. There is a file method called <code>seek()</code> which moves our position in the file to any place we want. If we want to go to the beginning, what position would it be?&rdquo;</p>
+<p>&ldquo;Zero!&rdquo; said Erik. </p>
+<p>&ldquo;Of course! Now use this method to move to the beginning of the file and try to read it again.&rdquo;</p>
+<p>Erik typed:</p>
+<div class="codehilite"><pre><span></span>In [61]: f.seek(0)
+Out[61]: 0
+
+In [62]: f.read()
+Out[62]: &#39;Erik,chocolate,butterscotch,caramel\nPavel,coffee,plain,chocolate\n&#39;
+</pre></div>
+
+<p>&ldquo;Very good. Now let&rsquo;s read it order by order, meaning line by line. Luckily, Python has a simple method for this. As soon as we are going to repeat some action a number of times, we are going to use&mdash;you guessed it right&mdash;a <code>for</code> loop! Let me show you.&rdquo; </p>
+<div class="codehilite"><pre><span></span>In [64]: f.seek(0)
+Out[64]: 0
+
+In [65]: for line in f:
+    ...:     print(line)
+    ...:     
+Erik,chocolate,butterscotch,caramel
+
+Pavel,coffee,plain,chocolate
+</pre></div>
+
+<p>&ldquo;You see, here we&rsquo;re looping through the file and doing something with each line of the file. We don&rsquo;t want just to print them, we want to split them into products, flavors, toppings. So, naturally, we&rsquo;ll use the method <code>split()</code> for that. Look how it works:&rdquo;</p>
+<div class="codehilite"><pre><span></span>In [67]: for line in f:
+    ...:     name,product,flavor,topping = line.split(&#39;,&#39;)
+    ...:     print(name)
+    ...:     print(product)
+    ...:     print(flavor)
+    ...:     print(topping)
+    ...:     
+    ...:     
+Erik
+chocolate
+butterscotch
+caramel
+
+Pavel
+coffee
+plain
+chocolate
+</pre></div>
+
+<p>I explained, &ldquo;We use the method <code>split()</code> for each line here. And we tell it that we want to split the lines into pieces that are separated by comma. When we split it, we assign all pieces to respective variables on the left side of this statement. In Python it&rsquo;s pretty common when there are several variables  at the left side of the assignment statement. &ldquo;</p>
+<p>&ldquo;I like it!&rdquo; said Erik. &ldquo;With this I know now how to print it like a receipt. I&rsquo;ll just add word like &lsquo;Dear&rsquo; and &lsquo;your product is&rsquo; and print the variables.&rdquo;</p>
+<p>&ldquo;Sounds like a plan to me,&rdquo; I said. &ldquo;I just want to clean up it a little bit. Type <code>topping</code>.&rdquo;</p>
+<p>Erik did it:</p>
+<div class="codehilite"><pre><span></span>In [68]: topping
+Out[68]: &#39;chocolate\n&#39;
+</pre></div>
+
+<p>I pointed to the output and said, &ldquo;You see this &lsquo;<code>\n</code>&lsquo; character at the end? It&rsquo;s a newline symbol and we don&rsquo;t need it. We should strip it from the line after we took it from the file. And, believe it or not, there is a special method to strip characters from strings. And it&rsquo;s called&hellip;&rdquo;</p>
+<p>&rdquo;&hellip;Strip?&rdquo; guessed Erik. </p>
+<p>&ldquo;Yes, &lsquo;<code>strip()</code>. We can put it right before <code>split()</code>, like this: <code>line.strip('\n').split(',')</code>. Isn&rsquo;t it cool that you can &lsquo;chain&rsquo; methods together in one line? Try it yourself.&rdquo;</p>
+<p>Now Erik was ready to reuse the code written my me. He didn&rsquo;t forget to move the position to the beginning and he also added something from himself.</p>
+<div class="codehilite"><pre><span></span>In [73]: f.seek(0)
+Out[73]: 0
+
+In [74]: for line in f:
+    ...:     name,product,flavor,topping = line.strip(&#39;\n&#39;).split(&#39;,&#39;)
+    ...:     print(&quot;Dear &quot;, name, &quot;here is your order:&quot;)
+    ...:     print(&quot;Base product: &quot;, product)
+    ...:     print(&quot;Flavor: &quot;, flavor)
+    ...:     print(&quot;Topping: &quot;, topping)
+    ...:     print(&quot;Guten Appetit!&quot;)
+    ...:     
+Dear  Erik here is your order:
+Base product:  chocolate
+Flavor:  butterscotch
+Topping:  caramel
+Guten Appetit!
+Dear  Pavel here is your order:
+Base product:  coffee
+Flavor:  plain
+Topping:  chocolate
+Guten Appetit!
+</pre></div>
+
+<p>&ldquo;I see that your German lessons with Grandma are not a waste of time,&rdquo; I said. &ldquo;Great job, Erik. Let&rsquo;s take a break for now&mdash;we have done a lot today. Tomorrow we&rsquo;ll make another function to list orders and also a main menu.&rdquo;</p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Python_vacation_day4/index.html" title="Day 4 - Functions" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Day 4 - Functions
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Pavel Anni
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application-6940329b9f.js"></script>
+      
+      
+      <script>app.initialize({url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

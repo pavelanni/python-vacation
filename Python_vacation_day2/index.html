@@ -150,8 +150,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Python_vacation_day0/index.html" title="Day 0 - Hello, World" class="md-nav__link">
-      Day 0 - Hello, World
+    <a href="../Python_vacation_day0/index.html" title="Day 0 - Coffee for Friends" class="md-nav__link">
+      Day 0 - Coffee for Friends
     </a>
   </li>
 
@@ -236,6 +236,18 @@
   <li class="md-nav__item">
     <a href="../Python_vacation_day4/index.html" title="Day 4 - Functions" class="md-nav__link">
       Day 4 - Functions
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Python_vacation_day5/index.html" title="Day 5 - Files" class="md-nav__link">
+      Day 5 - Files
     </a>
   </li>
 
@@ -343,7 +355,7 @@
 <span class="go">1</span>
 </pre></div>
 
-<p>&ldquo;This is good, but in reality you wanted to print out something like &lsquo;Here is your order: base product: coffee, flavor: marshmallow, topping: chocolate&rsquo;, right? How would you get products and flavors from the numbers?&rdquo;</p>
+<p>&ldquo;This is good, but in reality, you wanted to print out something like &lsquo;Here is your order: base product: coffee, flavor: marshmallow, topping: chocolate&rsquo;, right? How would you get products and flavors from the numbers?&rdquo;</p>
 <p>&ldquo;Yes, you told me yesterday! We&rsquo;ll use them as list indexes!&rdquo;</p>
 <p>&ldquo;Go ahead!&rdquo;</p>
 <p>Erik came up with this script:</p>
@@ -384,15 +396,15 @@ TypeError: list indices must be integers or slices, not str
 </pre></div>
 
 <p>&ldquo;What&rsquo;s this?&rdquo; he looked puzzled.</p>
-<p>&ldquo;This is your first error message! Congatulations!&rdquo;</p>
+<p>&ldquo;This is your first error message! Congratulations!&rdquo;</p>
 <p>&ldquo;Why are you so glad??? What&rsquo;s so good about error messages?&rdquo; Erik was clearly offended. Of course, he was sure that his dad is making fun of him.</p>
-<p>&ldquo;Erik, don&rsquo;t get me wrong. Believe me, I want your application to work as much as you do. That&rsquo;s why I&rsquo;m glad to see an error message&ndash;at least it give us some information. It&rsquo;s much worse when your program just doesn&rsquo;t work and says nothing. Also, you have heard this from me many times already: making mistakes is the best way to learn. Don&rsquo;t worry, we&rsquo;ll fix it.&rdquo;</p>
+<p>&ldquo;Erik, don&rsquo;t get me wrong. Believe me, I want your application to work as much as you do. That&rsquo;s why I&rsquo;m glad to see an error message&ndash;at least it gives us some information. It&rsquo;s much worse when your program just doesn&rsquo;t work and says nothing. Also, you have heard this from me many times already: making mistakes is the best way to learn. Don&rsquo;t worry, we&rsquo;ll fix it.&rdquo;</p>
 <p>&ldquo;But what should we do?&rdquo;</p>
-<p>&ldquo;You see, in this case Python is pretty clear about what&rsquo;s wrong. It says that list indices must be integers, not strings. Remember, before we started working with menus, when you asked your users about their preferences what did you get?&rdquo;</p>
+<p>&ldquo;You see, in this case, Python is pretty clear about what&rsquo;s wrong. It says that list indices must be integers, not strings. Remember, before we started working with menus, when you asked your users about their preferences what did you get?&rdquo;</p>
 <p>&ldquo;They could answer &lsquo;coffee&rsquo; or &lsquo;strawberry&rsquo;.&rdquo;</p>
 <p>&ldquo;And what are they in Python?&rdquo;</p>
 <p>&ldquo;Strings?&rdquo;</p>
-<p>&ldquo;Right, they are strings! And now when your users input &lsquo;1&rsquo; or &lsquo;3&rsquo;, or &lsquo;7&rsquo; - they also input <em>strings</em> which consist of numbers. They are not numbers, they are strings consisting of <em>letters</em> &lsquo;1&rsquo;, &lsquo;3&rsquo;, &lsquo;7&rsquo;. Luckily, in Python we can easily convert them to numbers with function <code>int()</code>. You have to do this: take &lsquo;p&rsquo; or &lsquo;f&rsquo; or &lsquo;t&rsquo;&ndash;the answer you received from the user&ndash;and convert it to integer using <code>int()</code>. You can do it right after the <code>input()</code> call and assign it to something like <code>p_index</code>. In Python you can even assign it to the same variable&ndash;what used to be a string, becomes integer. But for now let&rsquo;s have separate variables: our program will be more readable this way.&rdquo;</p>
+<p>&ldquo;Right, they are strings! And now when your users input &lsquo;1&rsquo; or &lsquo;3&rsquo;, or &lsquo;7&rsquo; - they also input <em>strings</em> which consist of numbers. They are not numbers, they are strings consisting of <em>letters</em> &lsquo;1&rsquo;, &lsquo;3&rsquo;, &lsquo;7&rsquo;. Luckily, in Python, we can easily convert them to numbers with function <code>int()</code>. You have to do this: take &lsquo;p&rsquo; or &lsquo;f&rsquo; or &lsquo;t&rsquo;&ndash;the answer you received from the user&ndash;and convert it to an integer using <code>int()</code>. You can do it right after the <code>input()</code> call and assign it to something like <code>p_index</code>. In Python you can even assign it to the same variable&ndash;what used to be a string, becomes an integer. But for now let&rsquo;s have separate variables: our program will be more readable this way.&rdquo;</p>
 <p>&ldquo;Like this?&rdquo;</p>
 <div class="codehilite"><pre><span></span><span class="n">p_index</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 </pre></div>
@@ -440,7 +452,7 @@ TypeError: list indices must be integers or slices, not str
 Here is your order: base product:  coffee , flavor:  sweetstrawberry , topping:  sweetstrawberry
 </pre></div>
 
-<p>&ldquo;Wait! It got it all wrong! I asked for chocolate with blueberry and it gave me coffee with sweetstraberry!&rdquo;</p>
+<p>&ldquo;Wait! It got it all wrong! I asked for chocolate with blueberry and it gave me coffee with sweetstrawberry!&rdquo;</p>
 <p>&ldquo;First of all, let me ask you: &lsquo;Who is that &lsquo;it&rsquo; you are talking about?&rsquo;&ldquo;</p>
 <p>&ldquo;Python, of course, who else??&rdquo;</p>
 <p>&ldquo;Erik, dear, please remember: computer and Python do only what <strong>you</strong> told them to do. If <strong>your</strong> program doesn&rsquo;t work as expected, please don&rsquo;t blame Python for that. Just try to think: what could be wrong here? You converted the strings to numbers, that&rsquo;s fine. You used those numbers as indexes for your lists&hellip;&rdquo;</p>
@@ -495,9 +507,9 @@ Here is your order: base product:  coffee , flavor:  sweetstrawberry , topping: 
 </pre></div>
 
 <p>&ldquo;AGAIN??? You broke it again!&rdquo;</p>
-<p>&ldquo;You see, Python clearly tells you that the index I&rsquo;ve entered is out of range. Which means we have to check the input not only for being a number, but also for being a &lsquo;good&rsquo; number, i.e. being in the range of our lists&rsquo; indexes. And, as far as you can see, for different lists this range is different.&rdquo;</p>
+<p>&ldquo;You see, Python clearly tells you that the index I&rsquo;ve entered is out of range. Which means we have to check the input not only for being a number but also for being a &lsquo;good&rsquo; number, i.e. being in the range of our lists&rsquo; indexes. And, as far as you can see, for different lists this range is different.&rdquo;</p>
 <p>&ldquo;Okay, okay, I&rsquo;ll do that. But it&rsquo;s so-o boring to check everything!..&rdquo;</p>
-<p>&ldquo;I completely agree with you. It&rsquo;s probably the most boring part of programming. But at the same time it&rsquo;s one of the most important parts, if we want to write safe programs and be protected from hacker attacks. Believe it or not, a lot of hacker attacks happen just because programmers didn&rsquo;t check the input.</p>
+<p>&ldquo;I completely agree with you. It&rsquo;s probably the most boring part of programming. But at the same time, it&rsquo;s one of the most important parts, if we want to write safe programs and be protected from hacker attacks. Believe it or not, a lot of hacker attacks happen just because programmers didn&rsquo;t check the input.</p>
 <p>&ldquo;Let&rsquo;s leave it for tomorrow. We&rsquo;ll have to do two things: check if the input is an integer number and check if it&rsquo;s in the range of list indexes,&rdquo; with this I felt much better: now we had a plan for tomorrow.</p>
 <p>TODO: add links to the examples of hacker attacks</p>
                 
