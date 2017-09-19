@@ -368,6 +368,220 @@
                 
                 <h1 id="python-vacation-day-11">Python Vacation &mdash; Day 11</h1>
 <h2 id="automate-it">Automate It</h2>
+<p>&ldquo;It was quite a challenge last time when we had to connect a database to our web application, wasn&rsquo;t it?&rdquo; I asked Erik. </p>
+<p>&ldquo;Yeah&hellip; My head is still spinning,&rdquo; said Erik and I knew he was not exaggerating.</p>
+<p>&ldquo;Can you recall what we had to do yesterday? There was a number of steps.&rdquo;</p>
+<p>&ldquo;Well&hellip; You gave me access to the virtual machine in our &lsquo;home cloud&rsquo;. Then I installed the PostgreSQL package. Then I connected to Postgres and created a new database called &lsquo;coffeeshop&rsquo;. Also you told me to create a separate database user for my application, so I did that. Then I logged in as that &lsquo;coffeeshop&rsquo; user and created a new table for my orders. Then we made changes in the <code>get_order.py</code> and <code>list_orders.py</code> scripts to use SQL instead of just files. And then we copied the scripts to the <code>cgi-bin</code> directory. Oh, and also you had to change something in the database configuration, but I don&rsquo;t remember what it was.&rdquo;</p>
+<p>&ldquo;This is great, Erik! Honestly, I didn&rsquo;t expect that you remember all the steps in such details. Now let me ask you: could you repeat all the steps youself?&rdquo;</p>
+<p>&ldquo;Oh, no!&rdquo; said Erik. It was quite obvious that he enjoyed working with Python code more than doing sysadmin stuff. &ldquo;It&rsquo;s so boring and I&rsquo;m afraid I make a mistake somewhere.&rdquo;</p>
+<p>&ldquo;But we&rsquo;ll have to do it again if we want to publish your application on the cloud,&rdquo; I said.</p>
+<p>&ldquo;Could you do that for me?&rdquo; asked Erik. &ldquo;Let&rsquo;s separate our duties: I will work with the code and you will do that systems stuff.&rdquo;</p>
+<p>I said, &ldquo;I understand you. Of course, I could help you, but what if I&rsquo;m not around? And you just have updated your application&mdash;like added new flavors and toppings to your menu&mdash;and you want to publish it right away? Or you just want to test a new color scheme? I think you should be able to publish your applications yourself. But I have a good news for you.&rdquo;</p>
+<p>&ldquo;What is your good news?&rdquo; Erik was suspicious. He knew from experience that good news are usually accompanied by bad news, and he expected that he had to learn something new again. But he was curious anyway and he still wanted to get his application published online. </p>
+<p>&ldquo;Good news is that you can automate this process and next time you&rsquo;ll just run one or two scripts and they will do everything for you.&rdquo;</p>
+<p>&ldquo;But who will write those two scripts?&rdquo; Erik suspictions seemed to be confirmed.</p>
+<p>&ldquo;You, of course!&rdquo; I said with a big smile on my face. &ldquo;Don&rsquo;t worry, I&rsquo;ll help you.&rdquo;</p>
+<p>Erik didn&rsquo;t look very happy, but the perspective to type all those commands again was not much better. He said, &ldquo;So, will we use Python for those automation scripts?&rdquo;</p>
+<p>&ldquo;No,&rdquo; I said. &ldquo;There is a tool called &lsquo;Ansible&rsquo; and its language is much simpler than Python, it&rsquo;s called YAML. Yet Another Markup Language. Seriously, I&rsquo;m not making this up. You will see, it&rsquo;s very easy to read and understand.&rdquo;</p>
+<p>&ldquo;And what do those scripts do, exactly?&rdquo; asked Erik. &ldquo;Should I copy all the commands from my history to those scripts?&rdquo;</p>
+<p>&ldquo;No,&rdquo; I said. &ldquo;That would be true if you were going to create shell scripts. But Ansible is smarter than shell. With Ansible you don&rsquo;t type Linux commands, you just describe what you want to achieve and it does that for you. More than that, you don&rsquo;t even have to login to the virtual machine where you want to publish your application, Ansible does that for you. Even more, if your application becomes popular and you want more servers on the cloud, Ansible can easily publish your application on as many machines as you need.&rdquo;</p>
+<p>&ldquo;Will it configure a database for me as well?&rdquo;</p>
+<p>&ldquo;Sure! Not only that&mdash;it will install all necessary packages, it will copy your files to the web server, it will copy your scripts to <code>cgi-bin</code> and make sure the database and webserver are up and running. You just have to tell it to do that, but believe me, it&rsquo;s much easier than those shell commands you had to type the other day.&rdquo;</p>
+<p>&ldquo;Why didn&rsquo;t you tell me about Ansible earlier? Okay, okay, I know your answer: you wanted me to suffer first. Well, shall we start?&rdquo;</p>
+<p>&ldquo;Sure. I have already prepared another virtual machine for you to practice. It has just a bare minimum Linux installation and you can connect to it via SSH. Yes, right from your account here. I have installed your SSH key onto it and added you to the group of <code>sudo</code> users. That means you can run superuser commands on that machine. I even configured it so you don&rsquo;t have to enter password. Of course, you shouldn&rsquo;t configure your servers in real life this way, but just for educational purposes I made it simple&hellip; You can try it right now. <code>ssh</code> into that machine: it&rsquo;s IP address is 192.168.1.125. Use the key called &lsquo;<code>vbox-erik</code>&lsquo; in your current directory. When you&rsquo;re logged in, try to run some command where you need &lsquo;<code>sudo</code>&rsquo;. Like &lsquo;<code>sudo ls -a /root</code>&rsquo;. &ldquo;</p>
+<p>Erik typed:</p>
+<div class="codehilite"><pre><span></span><span class="gp">$</span> ssh -i vbox-erik erik@192.168.1.125
+<span class="go">. . .</span>
+<span class="gp">erik@vacation:~$</span> sudo ls -a /root
+<span class="go">.  ..  .bashrc  .nano  .profile</span>
+<span class="gp">erik@vacation:~$</span> 
+</pre></div>
+
+<p>&ldquo;Good,&rdquo; I said, &ldquo;it works. Now exit that machine and try if Ansible works. I have configured you as Ansible user in this directory and also I&rsquo;ve included this VirtualBox machine&rsquo;s IP in the list of hosts. In other words, it should work now.&rdquo;</p>
+<p>Erik exited the virtual machine and looked inquiringly at me.</p>
+<p>I said: &ldquo;Now type &lsquo;<code>ansible all -m ping</code>&rsquo;. &ldquo;</p>
+<p>Erik typed and got this:</p>
+<div class="codehilite"><pre><span></span><span class="gp">$</span> ansible all -m ping
+<span class="go">192.168.1.125 | SUCCESS =&gt; {</span>
+<span class="go">    &quot;changed&quot;: false, </span>
+<span class="go">    &quot;ping&quot;: &quot;pong&quot;</span>
+<span class="go">}</span>
+</pre></div>
+
+<p>&ldquo;Cool, Ansible works too!&rdquo; I said. &ldquo;Now let me show you a couple of playbooks I have prepared for you. Just to save time I am not going to force you to write a lot of them.&rdquo; Erik smiled. </p>
+<p>I opened several files in the editor and showed the first one. &ldquo;Look,&rdquo; I said, &ldquo;first we have to install the web server, right? And here is our first Ansible script. Look if you can read and understand it.&rdquo; </p>
+<div class="codehilite"><pre><span></span><span class="c1"># This installs and starts Apache</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">hosts</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">all</span>
+  <span class="l l-Scalar l-Scalar-Plain">gather_facts</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+  <span class="l l-Scalar l-Scalar-Plain">become</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
+
+  <span class="l l-Scalar l-Scalar-Plain">tasks</span><span class="p p-Indicator">:</span>
+
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Install Apache</span>
+      <span class="l l-Scalar l-Scalar-Plain">apt</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">name=apache2 update_cache=yes</span>
+
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Enable CGI</span>
+      <span class="l l-Scalar l-Scalar-Plain">command</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">a2enmod cgi</span>
+
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Start Apache</span>
+      <span class="l l-Scalar l-Scalar-Plain">service</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">name=apache2 state=restarted</span>
+</pre></div>
+
+<p>Erik looked at the script. &ldquo;Well, it&rsquo;s even simpler than Python,&rdquo; he said. &ldquo;I can see the list of tasks: there are three of them. I see that you want to install Apache, enable CGI (yes, I remember we ran this command when we started working with CGI scripts) and start Apache. Pretty simple, I like it! I see that you want to do it on all hosts&mdash;but we only have one. I just don&rsquo;t understand &lsquo;<code>gather_facts</code>&lsquo; and &lsquo;<code>become</code>&rsquo;. What do they do?&rdquo;</p>
+<p>I was glad he grasped things so quickly. &ldquo;As you can easliy guess, &lsquo;<code>gather_facts</code>&lsquo; is about gathering facts. Ansible wants to know as much as possible about the systems it&rsquo;s going to manage. So first it gathers facts about the systems. Like operating system version, IP address and hostname, and so on and so forth. The good thing it that you can use those facts later in your scripts. For example, if the system is Ubuntu Linux, you use the &lsquo;<code>apt</code>&lsquo; command to install packages and if it&rsquo;s Red Hat, you use &lsquo;<code>yum</code>&lsquo; for that. In our case we don&rsquo;t need that and I decided to save time and skip this. &lsquo;<code>become</code>&lsquo; is a little trickier. Remember, I told you that I have created a user account for you at the target machine? Some commands you can&rsquo;t run as a normal user. You have to <em>become</em> a superuser, or <code>root</code>.&rdquo;</p>
+<p>&ldquo;Like I did with &lsquo;<code>sudo</code>&rsquo;?&rdquo; asked Erik.</p>
+<p>&ldquo;Exactly! You are telling Ansible that you are going to become &lsquo;<code>root</code>&lsquo; to run certain commands. Sometimes you want to become a different user, and then you explicitly tell that. We&rsquo;ll see it in one of the next scripts.&rdquo;</p>
+<p>&ldquo;And also,&rdquo; I added, &ldquo;it not me, who wants to install Apache, it&rsquo;s you,&rdquo; I smiled and Erik understood me. &ldquo;What is the command to run Ansible scripts?&rdquo; he asked. </p>
+<p>&ldquo;Playbooks. We call them playbooks. Just type &lsquo;<code>ansible-playbook apache-install.yml</code>&rsquo;.&rdquo;</p>
+<p>Erik typed and watched the output:</p>
+<div class="codehilite"><pre><span></span>$ ansible-playbook apache-install.yml
+</pre></div>
+
+<p>&ldquo;Now try to access the web server at <code>http://192.168.1.125</code>,&rdquo; I suggested. Erik opened this URL in his browser and found the default Apache page. </p>
+<p>&ldquo;You see, instead of typing three commands you typed just one and got Apache installed. What is also good about Ansible that if you needed to install 3, 5, 100 web servers, you&rsquo;d have to type the same single command and Ansible would install Apache in parallel on all those servers.&rdquo;</p>
+<p>&ldquo;Why would anybody need one hundred web servers?&rdquo; asked Erik. He looked surpised by the scale of real life applications. I said, &ldquo;Imaging you are working not on a coffeeshop for your neighborhood friends, but on a big online shop or other web application. And suddenly it becomes very popular. You don&rsquo;t want to lose your customers just because your web server can&rsquo;t handle the load, right? So you start many web servers and put a thing called <em>load balancer</em> in front of them. That&rsquo;s when you need to start many similar servers.&rdquo;</p>
+<p>&ldquo;Okay,&rdquo; said Erik, &ldquo;what&rsquo;s now?&rdquo;</p>
+<p>&ldquo;What else do we need? Install the database, of course! Look at this playbook called &lsquo;<code>postgres-install.yml</code>&rsquo;.&rdquo;</p>
+<div class="codehilite"><pre><span></span><span class="c1"># This installs postgres and psycopg2</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">hosts</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">all</span>
+  <span class="l l-Scalar l-Scalar-Plain">gather_facts</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+  <span class="l l-Scalar l-Scalar-Plain">become</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
+
+  <span class="l l-Scalar l-Scalar-Plain">tasks</span><span class="p p-Indicator">:</span>
+
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Install PostgreSQL</span>
+      <span class="l l-Scalar l-Scalar-Plain">apt</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">name=&quot;{{ item }}&quot; state=installed</span>
+      <span class="l l-Scalar l-Scalar-Plain">with_items</span><span class="p p-Indicator">:</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">postgresql</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">postgresql-contrib</span>
+
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Replace peer auth with md5 in PostgreSQL</span>
+      <span class="l l-Scalar l-Scalar-Plain">lineinfile</span><span class="p p-Indicator">:</span>
+        <span class="l l-Scalar l-Scalar-Plain">backup</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">yes</span>
+        <span class="l l-Scalar l-Scalar-Plain">path</span><span class="p p-Indicator">:</span> <span class="s">&#39;/etc/postgresql/9.5/main/pg_hba.conf&#39;</span>
+        <span class="l l-Scalar l-Scalar-Plain">regexp</span><span class="p p-Indicator">:</span> <span class="s">&#39;local</span><span class="nv">   </span><span class="s">all</span><span class="nv">      </span><span class="s">all</span><span class="nv">                              </span><span class="s">peer&#39;</span>
+        <span class="l l-Scalar l-Scalar-Plain">line</span><span class="p p-Indicator">:</span> <span class="s">&#39;local</span><span class="nv">   </span><span class="s">all</span><span class="nv">          </span><span class="s">all</span><span class="nv">                              </span><span class="s">md5&#39;</span>
+
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Install pip3</span>
+      <span class="l l-Scalar l-Scalar-Plain">apt</span><span class="p p-Indicator">:</span>
+        <span class="l l-Scalar l-Scalar-Plain">name=python3-pip update_cache=yes</span>
+
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Install psycopg2</span>
+      <span class="l l-Scalar l-Scalar-Plain">pip</span><span class="p p-Indicator">:</span>
+        <span class="l l-Scalar l-Scalar-Plain">executable</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">/usr/bin/pip3</span>
+        <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">psycopg2</span>
+
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Start PostgreSQL</span>
+      <span class="l l-Scalar l-Scalar-Plain">service</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">name=postgresql state=started</span>
+</pre></div>
+
+<p>Erik looked puzzled. I decided to help him. &ldquo;I know, you want to ask what are these &lsquo;<code>pip3</code>&lsquo; and &lsquo;<code>psycopg2</code>&rsquo;. The latter is a Python module which we need to talk to PostgreSQL database. We used it already in your application, but I had installed it already. And &lsquo;<code>pip3</code>&lsquo; is a tool to install Python modules. You haven&rsquo;t seen it before because I have installed all the modules beforehand.&rdquo;</p>
+<p>&ldquo;Also look at the first task,&rdquo; I continued. &ldquo;You see this &lsquo;<code>{{ item }}</code>&lsquo; and &lsquo;<code>with_items</code>&lsquo; things? We can use them in Ansible similar to loops in Python. Like here, we want to install several packages from the list. Second task is needed because we are going to create a user in PostgreSQL, but not in Linux, so we can&rsquo;t use peer authentication. Don&rsquo;t worry about that right now, we&rsquo;ll discuss it later. Everything else should look familiar to you already. Go ahead and run this playbook too.&rdquo;</p>
+<p>Erik typed:</p>
+<div class="codehilite"><pre><span></span>$ ansible-playbook postgres-install.yml
+PLAY [all] *******************************************************************************************************
+
+TASK [Install PostgreSQL] ****************************************************************************************
+changed: [192.168.1.125] =&gt; (item=[u&#39;postgresql&#39;, u&#39;postgresql-contrib&#39;])
+
+TASK [Replace peer auth with md5 in PostgreSQL] ******************************************************************
+changed: [192.168.1.125]
+
+TASK [Install pip3] **********************************************************************************************
+changed: [192.168.1.125]
+
+TASK [Install psycopg2] ******************************************************************************************
+changed: [192.168.1.125]
+
+TASK [Start PostgreSQL] ******************************************************************************************
+ok: [192.168.1.125]
+
+PLAY RECAP *******************************************************************************************************
+192.168.1.125              : ok=5    changed=4    unreachable=0    failed=0   
+</pre></div>
+
+<p>&ldquo;Good,&rdquo; I said. &ldquo;The database server is up and running. Now we have to create a database and a user to work with it. And again, we are going to use Ansible modules for that.&rdquo;</p>
+<p>&ldquo;It seems there is an Ansible module for everything!&rdquo; exclaimed Erik.</p>
+<p>&ldquo;Well, almost. There are over 1300 modules currently. And if you can&rsquo;t find a module you need, you can write it yourself&mdash;in Python&mdash;and it will become part of Ansible&mdash;of course, if you wrote it well. Look at this playbook which creates a database and a user. I&rsquo;m sure now you&rsquo;ll understand everything.&rdquo;</p>
+<div class="codehilite"><pre><span></span><span class="c1"># This creates a CoffeeShop database and a user</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">hosts</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">all</span>
+  <span class="l l-Scalar l-Scalar-Plain">gather_facts</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+  <span class="l l-Scalar l-Scalar-Plain">become</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
+  <span class="l l-Scalar l-Scalar-Plain">become_user</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">postgres</span>
+
+  <span class="l l-Scalar l-Scalar-Plain">tasks</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Create a database for the CoffeeShop application</span>
+      <span class="l l-Scalar l-Scalar-Plain">postgresql_db</span><span class="p p-Indicator">:</span>
+        <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">coffeeshop</span>
+        <span class="l l-Scalar l-Scalar-Plain">state</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
+        <span class="l l-Scalar l-Scalar-Plain">login_user</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">postgres</span>
+
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Create a user coffeeshop</span>
+      <span class="l l-Scalar l-Scalar-Plain">postgresql_user</span><span class="p p-Indicator">:</span>
+        <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">coffeeshop</span>
+        <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">coffeeshop</span>
+        <span class="l l-Scalar l-Scalar-Plain">role_attr_flags</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">NOSUPERUSER,CREATEDB,LOGIN</span>
+        <span class="l l-Scalar l-Scalar-Plain">state</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
+        <span class="l l-Scalar l-Scalar-Plain">db</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">coffeeshop</span>
+</pre></div>
+
+<p>&ldquo;A-ha, now I see that you want it to become a different user, not &lsquo;<code>root</code>&rsquo;. I remember, you told me it&rsquo;s a user who manages the whole database. Like &lsquo;<code>root</code>&lsquo; for PostgreSQL.&rdquo; Erik ran the playbook and watched its output. Everything was in place for his application. Well, almost.</p>
+<p>&ldquo;But I also need a table for orders. Can I do it with Ansible?&rdquo; </p>
+<p>I liked that he started thinking the &ldquo;Ansible way&rdquo; and tried to solve his problems with this new tool. I said, &ldquo;Yes, but now you have to use SQL for that. There is no Ansible module specifically to create a table. After all, what would it do? It would call a SQL statement anyway. So in our case we&rsquo;ll create a simple SQL script and execute it on the target machine. That will be our next playbook. Now go ahead and run this one.&rdquo;</p>
+<div class="codehilite"><pre><span></span>$ ansible-playbook postgres-createdb.yml
+
+PLAY [all] *******************************************************************************************************
+
+TASK [Create a database for CoffeeShop application] **************************************************************
+changed: [192.168.1.125]
+
+TASK [Create a user coffeeshop] **********************************************************************************
+changed: [192.168.1.125]
+
+PLAY RECAP *******************************************************************************************************
+192.168.1.125              : ok=2    changed=2    unreachable=0    failed=0   
+</pre></div>
+
+<p>&ldquo;Well,&rdquo; I said, &ldquo;now we have a database and a user. We can ask this user to run a SQL script for us. And it will be a simple script to create a table for your orders. Remember, when we just started working with databases we just ran a simple &lsquo;<code>CREATE TABLE</code>&lsquo; command and told PostgreSQL about the columns and types we wanted to have in the table. Now we&rsquo;ll create a script with this command, send it to the target machine and run it as a user &lsquo;<code>coffeeshop</code>&rsquo;. Look here, this is the script:&rdquo;</p>
+<div class="codehilite"><pre><span></span>---
+- hosts: database
+  gather_facts: False
+  become: True
+  become_user: postgres
+
+  tasks:
+    - name: Copy the table creation script
+      copy: &gt;
+        src=&quot;files/create-table-orders.sql&quot; 
+        dest=&quot;/tmp/create-table-orders.sql&quot;
+
+    - name: Execute sql script to create the table
+      command: &gt;
+        psql -h localhost 
+        &quot;user={{ postgres_user }} password={{ postgres_password }}&quot; 
+        -f /tmp/create-table-orders.sql
+
+    - name: Delete sql script
+      file: path=&quot;/tmp/create-table-orders.sql&quot; state=absent
+</pre></div>
+
+<div class="codehilite"><pre><span></span>$ ansible-playbook --ask-vault-pass create-table-orders.yml
+Vault password: 
+
+PLAY [database] **************************************************************************************************
+
+TASK [Copy the table creation script] ****************************************************************************
+changed: [192.168.1.166]
+
+TASK [Execute sql script to create the table] ********************************************************************
+changed: [192.168.1.166]
+
+TASK [Delete sql script] *****************************************************************************************
+changed: [192.168.1.166]
+
+PLAY RECAP *******************************************************************************************************
+192.168.1.166              : ok=3    changed=3    unreachable=0    failed=0   
+</pre></div>
                 
                   
                 
