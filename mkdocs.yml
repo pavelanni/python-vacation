@@ -8,6 +8,11 @@ extra:
     palette:
         primary: 'green'
         accent: 'deep orange'
+    disqus: 'pythonvacation-com'
+    social:
+        - type: 'linkedin'
+          link: 'https://www.linkedin.com/in/pavelanni/'
+
 
 pages:
   - Home:  index.md

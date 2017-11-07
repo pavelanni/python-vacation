@@ -356,4 +356,4 @@ Topping:  chocolate
 Guten Appetit!
 ```
 
-"I see that your German lessons with Grandma are not a waste of time," I said. "Great job, Erik. Let's take a break for now---we have done a lot today. Tomorrow we'll make another function to list orders and also a main menu."
+"I see that your German language lessons with Grandma are not a waste of time," I said. "Great job, Erik. Let's take a break for now---we have done a lot today. Tomorrow we'll make another function to list orders and also a main menu."

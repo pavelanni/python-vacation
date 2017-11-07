@@ -261,7 +261,11 @@ PLAY RECAP *********************************************************************
 
 ```
 
+"Now try to explain it to me," I asked Erik.
 
+"First you copy the SQL script to the machine, into `/tmp`. Then you execute it. And then you delete the script. I just don't understand where you are going to get those `postgres_password` and `postgres_user`."
+
+""
 
 
 ```
