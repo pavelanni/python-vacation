@@ -42,7 +42,7 @@ while good_input == False:
         good_input = True
 ```
 
-"Now try it," said I.
+"Now try it," I said.
 
 ```console
 erik@idea:~$ ./coffeeshop.py

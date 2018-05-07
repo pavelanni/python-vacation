@@ -100,7 +100,7 @@ Erik listened to me, but I could tell from looking at his face that it was not 1
 
 "Okay," answered Erik and started to type. 10 minutes later his main function looked like this:
 
-``` python
+```python
 def main_menu():
     while True:
         print("Welcome To Erik's Cafe!")
@@ -116,6 +116,7 @@ def main_menu():
             print("Thank you for visiting, please come again!")
         else:
             print("Please enter 'N', 'L' or 'X'!")
+```
 
 He tried to run it and everything was fine: he placed an order, he listed all orders... Then he said: "I can't exit! I pressed 'X' and got back to the menu!"
 

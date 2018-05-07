@@ -1,0 +1,2 @@
+22a9214c32a21e14b57e2d1c67fd214bd821870f160b3bf5de87a09148695d68 pythonvacation.com [25/Mar/2018:14:17:06 +0000] 24.126.168.11 arn:aws:iam::189849733858:user/alexadev A5F4A97CB91BFC15 REST.GET.BUCKETPOLICY - "GET /pythonvacation.com/?policy HTTP/1.1" 200 - 172 - 6 - "-" "S3Console/0.4" -
+22a9214c32a21e14b57e2d1c67fd214bd821870f160b3bf5de87a09148695d68 pythonvacation.com [25/Mar/2018:14:17:06 +0000] 24.126.168.11 arn:aws:iam::189849733858:user/alexadev F12F6879FA2AB2E3 REST.GET.ACL - "GET /pythonvacation.com/?acl HTTP/1.1" 200 - 941 - 46 - "-" "S3Console/0.4" -

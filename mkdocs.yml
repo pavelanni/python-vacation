@@ -2,12 +2,20 @@ site_name: Python Vacation
 site_author: Pavel Anni
 copyright: Pavel Anni
 use_directory_urls: false
+site_url: 'http://pythonvacation.com'
 
-
-extra:
+theme:
+    logo:
+        icon: 'face'
+    name: 'material'
     palette:
         primary: 'green'
         accent: 'deep orange'
+    font:
+        text: 'Roboto Slab'
+        code: 'Roboto Mono'
+
+extra:
     disqus: 'pythonvacation-com'
     social:
         - type: 'linkedin'
@@ -29,8 +37,6 @@ pages:
   - Day 10 - Databases: Python_vacation_day10.md
   - Day 11 - Automate It: Python_vacation_day11.md
   
-
-theme_dir: mkdocs-material/material
 markdown_extensions:
   - admonition
   - codehilite(guess_lang=false)
@@ -41,10 +47,3 @@ markdown_extensions:
   - pymdownx.betterem(smart_enable=all)
   - pymdownx.caret
   - pymdownx.critic
-  - pymdownx.inlinehilite
-  - pymdownx.magiclink
-  - pymdownx.mark
-  - pymdownx.smartsymbols
-  - pymdownx.superfences
-  - pymdownx.tasklist(custom_checkbox=true)
-  - pymdownx.tilde
