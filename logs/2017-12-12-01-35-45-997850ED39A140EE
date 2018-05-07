@@ -1,0 +1,2 @@
+22a9214c32a21e14b57e2d1c67fd214bd821870f160b3bf5de87a09148695d68 pythonvacation.com [12/Dec/2017:00:34:43 +0000] 95.154.209.38 - 9D5CA6A61C43C565 REST.GET.BUCKET - "GET / HTTP/1.1" 301 PermanentRedirect 444 - 2 - "-" "Go-http-client/1.1" -
+22a9214c32a21e14b57e2d1c67fd214bd821870f160b3bf5de87a09148695d68 pythonvacation.com [12/Dec/2017:00:34:45 +0000] 95.154.209.38 - 0B71885C37937583 REST.GET.BUCKET - "GET / HTTP/1.1" 301 PermanentRedirect 444 - 2 - "-" "Go-http-client/1.1" -

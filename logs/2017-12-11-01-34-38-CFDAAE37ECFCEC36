@@ -1,0 +1,1 @@
+22a9214c32a21e14b57e2d1c67fd214bd821870f160b3bf5de87a09148695d68 pythonvacation.com [11/Dec/2017:00:02:53 +0000] 73.106.77.59 arn:aws:iam::189849733858:user/alexadev E7C2ED951FD561B9 REST.GET.ENCRYPTION - "GET /pythonvacation.com?encryption= HTTP/1.1" 404 ServerSideEncryptionConfigurationNotFoundError 361 - 23 - "-" "S3Console/0.4, aws-internal/3" -
