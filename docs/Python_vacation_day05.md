@@ -95,7 +95,7 @@ In [5]: %cat a.txt
 1,2,3
 ```
 
-"You see, now it's there," said I. "Let's open it and write something else. You can use 'Up' and 'Down' arrows to access history, like in Linux shell."
+"You see, now it's there," I said. "Let's open it and write something else. You can use 'Up' and 'Down' arrows to access history, like in Linux shell."
 
 Erik repeated several previous commands:
 

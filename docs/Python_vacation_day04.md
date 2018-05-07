@@ -40,7 +40,7 @@
 
 "Okay, I'm ready. Let's call our function `menu`. I know that I have to use `def` to start writing it. And also I have to put something inside the parenthesis. Should it be the list of options?"
 
-"Exactly!" said I. I was proud of my boy. You know, teenagers are always like that: sometimes they surprise you with their brilliant minds, but sometimes they struggle with simple arithmetics. "Call it `options`, for example. You do remember that you should put the colon after parenthesis and indent the function body, don't you? You can copy most of the function body from what you have written already. Don't forget to return the index and don't forget that when we show `1` to the user, we have `0` in mind. So add some necessary arithmetics to the function. Enough instructions, go ahead and write it!"
+"Exactly!" I said. I was proud of my boy. You know, teenagers are always like that: sometimes they surprise you with their brilliant minds, but sometimes they struggle with simple arithmetics. "Call it `options`, for example. You do remember that you should put the colon after parenthesis and indent the function body, don't you? You can copy most of the function body from what you have written already. Don't forget to return the index and don't forget that when we show `1` to the user, we have `0` in mind. So add some necessary arithmetics to the function. Enough instructions, go ahead and write it!"
 
 Erik started writing and copying and in a couple minutes his function looked like this:
 
