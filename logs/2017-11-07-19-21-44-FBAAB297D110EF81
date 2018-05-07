@@ -1,1 +1,0 @@
-22a9214c32a21e14b57e2d1c67fd214bd821870f160b3bf5de87a09148695d68 pythonvacation.com [07/Nov/2017:18:46:26 +0000] 24.126.168.11 arn:aws:iam::189849733858:user/alexadev 38AEDFE5E636890C REST.GET.BUCKET - "GET /pythonvacation.com?max-keys=1&prefix=logs%2F2017-11-07-18-43-27-10E64EBCBF3D6298 HTTP/1.1" 200 - 648 - 47 46 "-" "S3Console/0.4, aws-internal/3" -

@@ -1,1 +1,0 @@
-22a9214c32a21e14b57e2d1c67fd214bd821870f160b3bf5de87a09148695d68 pythonvacation.com [07/Nov/2017:18:49:37 +0000] 24.126.168.11 arn:aws:iam::189849733858:user/alexadev E9B3DD3D8FAC22A6 REST.GET.BUCKETPOLICY - "GET /pythonvacation.com?policy= HTTP/1.1" 200 - 172 - 64 - "-" "S3Console/0.4, aws-internal/3" -
